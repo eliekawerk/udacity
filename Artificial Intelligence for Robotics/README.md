@@ -1,6 +1,6 @@
 # Artificial Intelligence for Robotics
 
-I took this course as part of my MLND Capstone project - Plot and Navigate a Virtual Maze
+I completed this course in Oct, 2016 as part of my MLND Capstone project - Plot and Navigate a Virtual Maze.
 
 I'll checkin my solutions of homework and final project "chasing a runaway robot" once the course changes its material.
 
