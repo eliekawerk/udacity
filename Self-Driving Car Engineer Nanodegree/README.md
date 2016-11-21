@@ -1,4 +1,4 @@
-# Self-Driving-Car-Engineer-Nanodegree
+# Self-Driving Car Engineer Nanodegree
 
 I'm currently taking this course in Nov, 2016.
 
