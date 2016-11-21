@@ -1,6 +1,6 @@
 # Self-Driving Car Engineer Nanodegree
 
-I'm currently taking this course in Nov, 2016.
+I'm currently taking this course in Nov, 2016
 
 I'll checkin my solutions of homework and final project once the course changes its material.
 
