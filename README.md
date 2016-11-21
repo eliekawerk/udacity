@@ -1,6 +1,6 @@
 # Udacity
 
-This is my collection of solutions for homeworks and projects presented in various Udacity courses that I completed.
+This is collection of my solutions for homeworks and projects presented in various Coursea courses that I have completed.
 
 ## About Udacity
 
