@@ -7,6 +7,7 @@ Recommended order for exploring these projects is as follows:
 - Titanic Survival Exploration
 - Predicting Boston Housing Prices
 - Build a Student Intervention System
+- Creating Customer Segments
 - Train a Smartcab to Drive
 - Capstone: Plot and Navigate a Virtual Maze
 - Technical Interview Practice
