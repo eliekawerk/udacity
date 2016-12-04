@@ -3,7 +3,7 @@
 
 Plotting and Navigating a Virtual Maze is "Hello World" of AI Robotics. 
 
-It touches the areas of Artificial Intelligence, Reinforcement Learning and Robotics. That is why this post appears in all three categories.
+It touches the areas of Artificial Intelligence, Reinforcement Learning and Robotics. 
 
 ### Review Comments:
 
@@ -21,28 +21,29 @@ My work was received very well. Following are some of the comments that I got fr
 
 You can get a taste of my work by watching following videos. Each video is about 2 mins long. For more details, then review the project report.
 
+
 1. EZ
-- [Random turn](https://www.youtube.com/watch?v=bk1I0pCzLyM)
-- [Follow wall](https://www.youtube.com/watch?v=4LQ7xwL-58k)
-- [Block deadend](https://www.youtube.com/watch?v=rQGUrwK7YnI)
+ - [Random turn](https://www.youtube.com/watch?v=bk1I0pCzLyM)
+ - [Follow wall](https://www.youtube.com/watch?v=4LQ7xwL-58k)
+ - [Block deadend](https://www.youtube.com/watch?v=rQGUrwK7YnI)
 
 2. Graph Search
-- [Depth first search](https://www.youtube.com/watch?v=0V92rnuzEfo)
-- [Breadth first search](https://www.youtube.com/watch?v=dvn2tY0Dgeg)
-- [Uniform cost search](https://www.youtube.com/watch?v=6Uh8QF85Phw)
-- [A* search](https://www.youtube.com/watch?v=4Hg3uPYtKvQ)
+ - [Depth first search](https://www.youtube.com/watch?v=0V92rnuzEfo)
+ - [Breadth first search](https://www.youtube.com/watch?v=dvn2tY0Dgeg)
+ - [Uniform cost search](https://www.youtube.com/watch?v=6Uh8QF85Phw)
+ - [A* search](https://www.youtube.com/watch?v=4Hg3uPYtKvQ)
 
 3. Reinforcement Learning
-- [Value Iteration](https://www.youtube.com/watch?v=mQJr3RmdvsI)
-- [Q Learning](https://www.youtube.com/watch?v=cf2WrR8UuRo)
+ - [Value Iteration](https://www.youtube.com/watch?v=mQJr3RmdvsI)
+ - [Q Learning](https://www.youtube.com/watch?v=cf2WrR8UuRo)
 
 4. Other
-- [Flood fill](https://www.youtube.com/watch?v=NBSps5kW_qg)
-- [Bonus: Tackling World championship Maze](https://www.youtube.com/watch?v=tm3HLxWAu8g)
+ - [Flood fill](https://www.youtube.com/watch?v=NBSps5kW_qg)
+ - [Bonus: Tackling World championship Maze](https://www.youtube.com/watch?v=tm3HLxWAu8g)
 
 <br />
 
-[Report](https://github.com/srikanthpagadala/udacity/blob/master/Machine%20Learning%20Engineer%20Nanodegree/Capstone:%20Plot%20and%20Navigate%20a%20Virtual%20Maze/report.pdf){:target="_blank"}
+[Report](https://github.com/srikanthpagadala/udacity/blob/master/Machine%20Learning%20Engineer%20Nanodegree/Capstone:%20Plot%20and%20Navigate%20a%20Virtual%20Maze/report.pdf)
 
 ### Resources:
 
