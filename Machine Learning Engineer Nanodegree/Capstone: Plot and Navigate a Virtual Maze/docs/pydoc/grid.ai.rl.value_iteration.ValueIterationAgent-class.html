@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>grid.ai.rl.value_iteration.ValueIterationAgent</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="grid-module.html">Package&nbsp;grid</a> ::
+        <a href="grid.ai-module.html">Package&nbsp;ai</a> ::
+        <a href="grid.ai.rl-module.html">Package&nbsp;rl</a> ::
+        <a href="grid.ai.rl.value_iteration-module.html">Module&nbsp;value_iteration</a> ::
+        Class&nbsp;ValueIterationAgent
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="grid.ai.rl.value_iteration.ValueIterationAgent-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class ValueIterationAgent</h1><p class="nomargin-top"><span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent">source&nbsp;code</a></span></p>
+<p>A ValueIterationAgent takes a Markov decision process on 
+  initialization and runs value iteration for a given number of iterations 
+  using the supplied discount factor.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.ai.rl.value_iteration.ValueIterationAgent-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mdp</span>,
+        <span class="summary-sig-arg">maze_model</span>,
+        <span class="summary-sig-arg">parent</span>,
+        <span class="summary-sig-arg">discount</span>=<span class="summary-sig-default">0.9</span>,
+        <span class="summary-sig-arg">iterations</span>=<span class="summary-sig-default">100</span>)</span><br />
+      Initialize ValueIterationAgent</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getValues"></a><span class="summary-sig-name">getValues</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return all computed values by state (location)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.getValues">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.ai.rl.value_iteration.ValueIterationAgent-class.html#getValue" class="summary-sig-name">getValue</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">state</span>)</span><br />
+      Return the value of the state (computed in __init__).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.getValue">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.ai.rl.value_iteration.ValueIterationAgent-class.html#computeQValueFromValues" class="summary-sig-name">computeQValueFromValues</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">state</span>,
+        <span class="summary-sig-arg">action</span>)</span><br />
+      Compute the Q-value of action in state from the value function stored
+      in self.values.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.computeQValueFromValues">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.ai.rl.value_iteration.ValueIterationAgent-class.html#computeActionFromValues" class="summary-sig-name">computeActionFromValues</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">state</span>)</span><br />
+      The policy is the best action in the given state according to the 
+      values currently stored in self.values.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.computeActionFromValues">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.ai.rl.value_iteration.ValueIterationAgent-class.html#getPolicy" class="summary-sig-name">getPolicy</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">state</span>)</span><br />
+      Return the computed policy (Direction of movement) from the given 
+      state</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.getPolicy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.ai.rl.value_iteration.ValueIterationAgent-class.html#getAction" class="summary-sig-name">getAction</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">state</span>)</span><br />
+      Returns the policy at the state (no exploration).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.getAction">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.ai.rl.value_iteration.ValueIterationAgent-class.html#getQValue" class="summary-sig-name">getQValue</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">state</span>,
+        <span class="summary-sig-arg">action</span>)</span><br />
+      Returns Q(state,action).</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.getQValue">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getFullPolicy"></a><span class="summary-sig-name">getFullPolicy</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return dict of policy for every cell in the maze</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.getFullPolicy">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">mdp</span>,
+        <span class="sig-arg">maze_model</span>,
+        <span class="sig-arg">parent</span>,
+        <span class="sig-arg">discount</span>=<span class="sig-default">0.9</span>,
+        <span class="sig-arg">iterations</span>=<span class="sig-default">100</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialize ValueIterationAgent</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>mdp</code></strong> (grid.ai.rl.value_iteration.MazeWorld) - handle to mazeWorld that provides startState, possibleActions in 
+          a given state and next state for a given action</li>
+        <li><strong class="pname"><code>maze_model</code></strong> (grid.model.maze_model.MazeModel) - handle to maze_model that provides information about cells 
+          explored, walls etc</li>
+        <li><strong class="pname"><code>parent</code></strong> (grid.ai.rl.value_iteration.ValueIteration) - handle to ui class, so that agent can publish status periodically</li>
+        <li><strong class="pname"><code>discount</code></strong> (float) - Discount Rate</li>
+        <li><strong class="pname"><code>iterations</code></strong> (int) - num of iterations to run to compute Values</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getValue"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getValue</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">state</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.getValue">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the value of the state (computed in __init__).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>state</code></strong> (tuple) - given tuple state (location) of robot</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="computeQValueFromValues"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">computeQValueFromValues</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">state</span>,
+        <span class="sig-arg">action</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.computeQValueFromValues">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Compute the Q-value of action in state from the value function stored 
+  in self.values.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>state</code></strong> (tuple) - given tuple state (location) of robot</li>
+        <li><strong class="pname"><code>action</code></strong> (grid.model.maze_model.Direction) - Direction of movement in Maze. Up, Down, Right, Left</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="computeActionFromValues"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">computeActionFromValues</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">state</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.computeActionFromValues">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The policy is the best action in the given state according to the 
+  values currently stored in self.values.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>state</code></strong> (tuple) - given tuple state (location) of robot</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getPolicy"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getPolicy</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">state</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.getPolicy">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the computed policy (Direction of movement) from the given 
+  state</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>state</code></strong> (tuple) - given tuple state (location) of robot</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getAction"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getAction</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">state</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.getAction">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the policy at the state (no exploration).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>state</code></strong> (tuple) - given tuple state (location) of robot</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getQValue"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getQValue</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">state</span>,
+        <span class="sig-arg">action</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.ai.rl.value_iteration-pysrc.html#ValueIterationAgent.getQValue">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns Q(state,action).</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>state</code></strong> (tuple) - given tuple state (location) of robot</li>
+        <li><strong class="pname"><code>action</code></strong> (grid.model.maze_model.Direction) - Direction of movement in Maze. Up, Down, Right, Left</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Nov  2 22:10:02 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

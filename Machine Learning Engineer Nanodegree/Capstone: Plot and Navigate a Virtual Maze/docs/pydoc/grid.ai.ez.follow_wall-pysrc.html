@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>grid.ai.ez.follow_wall</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="grid-module.html">Package&nbsp;grid</a> ::
+        <a href="grid.ai-module.html">Package&nbsp;ai</a> ::
+        <a href="grid.ai.ez-module.html">Package&nbsp;ez</a> ::
+        Module&nbsp;follow_wall
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="grid.ai.ez.follow_wall-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="grid.ai.ez.follow_wall-module.html">Module grid.ai.ez.follow_wall</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># Copyright (C) 2016 - Srikanth Pagadala, Conscious Computing</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"># email: srikanth.pagadala@gmail.com</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">random</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package grid=grid-module.html"><a title="grid" class="py-name" href="#" onclick="return doclink('link-0', 'grid', 'link-0');">grid</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package grid.ai=grid.ai-module.html"><a title="grid.ai" class="py-name" href="#" onclick="return doclink('link-1', 'ai', 'link-1');">ai</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Module grid.ai.abstract_ai=grid.ai.abstract_ai-module.html"><a title="grid.ai.abstract_ai" class="py-name" href="#" onclick="return doclink('link-2', 'abstract_ai', 'link-2');">abstract_ai</a></tt> <tt class="py-keyword">import</tt> <tt id="link-3" class="py-name" targets="Class grid.ai.abstract_ai.AbstractAI=grid.ai.abstract_ai.AbstractAI-class.html"><a title="grid.ai.abstract_ai.AbstractAI" class="py-name" href="#" onclick="return doclink('link-3', 'AbstractAI', 'link-3');">AbstractAI</a></tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-4" class="py-name"><a title="grid" class="py-name" href="#" onclick="return doclink('link-4', 'grid', 'link-0');">grid</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Package grid.model=grid.model-module.html"><a title="grid.model" class="py-name" href="#" onclick="return doclink('link-5', 'model', 'link-5');">model</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Module grid.model.maze_model=grid.model.maze_model-module.html"><a title="grid.model.maze_model" class="py-name" href="#" onclick="return doclink('link-6', 'maze_model', 'link-6');">maze_model</a></tt> <tt class="py-keyword">import</tt> <tt id="link-7" class="py-name" targets="Class grid.model.maze_model.Direction=grid.model.maze_model.Direction-class.html"><a title="grid.model.maze_model.Direction" class="py-name" href="#" onclick="return doclink('link-7', 'Direction', 'link-7');">Direction</a></tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"> </tt>
+<a name="FollowWall"></a><div id="FollowWall-def"><a name="L10"></a><tt class="py-lineno"> 10</tt> <a class="py-toggle" href="#" id="FollowWall-toggle" onclick="return toggle('FollowWall');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="grid.ai.ez.follow_wall.FollowWall-class.html">FollowWall</a><tt class="py-op">(</tt><tt class="py-base-class">AbstractAI</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FollowWall-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="FollowWall-expanded"><a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line">    <tt class="py-docstring">'''</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-docstring">    The wall follower, the best-known rule for traversing mazes, is also known as either </tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-docstring">    the left-hand rule or the right-hand rule. If the maze is simply connected, that is, </tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-docstring">    all its walls are connected together or to the maze's outer boundary, then by keeping </tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-docstring">    one hand in contact with one wall of the maze the solver is guaranteed not to get lost </tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-docstring">    and will reach a different exit if there is one; otherwise, he or she will return to </tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-docstring">    the entrance having traversed every corridor next to that connected section of walls </tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-docstring">    at least once.</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-docstring">    '''</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">     </tt>
+<a name="FollowWall.__init__"></a><div id="FollowWall.__init__-def"><a name="L21"></a><tt class="py-lineno"> 21</tt> <a class="py-toggle" href="#" id="FollowWall.__init__-toggle" onclick="return toggle('FollowWall.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="grid.ai.ez.follow_wall.FollowWall-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">maze_model</tt><tt class="py-op">,</tt> <tt class="py-param">loc</tt><tt class="py-op">,</tt> <tt class="py-param">heading</tt><tt class="py-op">,</tt> <tt class="py-param">ui</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FollowWall.__init__-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FollowWall.__init__-expanded"><a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-docstring">        Initialize the AI module</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-docstring">        @param maze_model: instance of maze_model class</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-docstring">        @type maze_model: grid.ai.model.maze_model.MazeModel</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"><tt class="py-docstring">        @param loc: start location of the robot</tt> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-docstring">        @type loc: [0, 0]. Array of len 2 specifying x and y coordinates of robot</tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"><tt class="py-docstring">        @param heading: initial heading direction of the robot. Up</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-docstring">        @type heading: one of the strings 'up', 'right', 'down', left'</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-docstring">        @param ui: handle to instance of ui class</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-docstring">        @type ui: slam_ui.SlamUi</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">         </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Module grid.ai.ez.follow_wall=grid.ai.ez.follow_wall-module.html"><a title="grid.ai.ez.follow_wall" class="py-name" href="#" onclick="return doclink('link-8', 'follow_wall', 'link-8');">follow_wall</a></tt> <tt class="py-op">=</tt> <tt class="py-name">random</tt><tt class="py-op">.</tt><tt class="py-name">choice</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt id="link-9" class="py-name"><a title="grid.model.maze_model.Direction" class="py-name" href="#" onclick="return doclink('link-9', 'Direction', 'link-7');">Direction</a></tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Variable grid.model.maze_model.Direction.Left=grid.model.maze_model.Direction-class.html#Left"><a title="grid.model.maze_model.Direction.Left" class="py-name" href="#" onclick="return doclink('link-10', 'Left', 'link-10');">Left</a></tt><tt class="py-op">,</tt> <tt id="link-11" class="py-name"><a title="grid.model.maze_model.Direction" class="py-name" href="#" onclick="return doclink('link-11', 'Direction', 'link-7');">Direction</a></tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Variable grid.model.maze_model.Direction.Right=grid.model.maze_model.Direction-class.html#Right"><a title="grid.model.maze_model.Direction.Right" class="py-name" href="#" onclick="return doclink('link-12', 'Right', 'link-12');">Right</a></tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">        <tt class="py-name">super</tt><tt class="py-op">(</tt><tt id="link-13" class="py-name" targets="Class grid.ai.ez.follow_wall.FollowWall=grid.ai.ez.follow_wall.FollowWall-class.html"><a title="grid.ai.ez.follow_wall.FollowWall" class="py-name" href="#" onclick="return doclink('link-13', 'FollowWall', 'link-13');">FollowWall</a></tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Method grid.ai.abstract_ai.AbstractAI.__init__()=grid.ai.abstract_ai.AbstractAI-class.html#__init__,Method grid.ai.ez.block_deadend.BlockDeadend.__init__()=grid.ai.ez.block_deadend.BlockDeadend-class.html#__init__,Method grid.ai.ez.follow_wall.FollowWall.__init__()=grid.ai.ez.follow_wall.FollowWall-class.html#__init__,Method grid.ai.ez.random_turn.RandomTurn.__init__()=grid.ai.ez.random_turn.RandomTurn-class.html#__init__,Method grid.ai.ff.flood_fill.FloodFill.__init__()=grid.ai.ff.flood_fill.FloodFill-class.html#__init__,Method grid.ai.gs.graph_search.GraphSearch.__init__()=grid.ai.gs.graph_search.GraphSearch-class.html#__init__,Method grid.ai.gs.graph_search.PositionSearchProblem.__init__()=grid.ai.gs.graph_search.PositionSearchProblem-class.html#__init__,Method grid.ai.rl.q_learning.MazeEnvironment.__init__()=grid.ai.rl.q_learning.MazeEnvironment-class.html#__init__,Method grid.ai.rl.q_learning.QLearningAgent.__init__()=grid.ai.rl.q_learning.QLearningAgent-class.html#__init__,Method grid.ai.rl.rl.ReinforcementLearning.__init__()=grid.ai.rl.rl.ReinforcementLearning-class.html#__init__,Method grid.ai.rl.value_iteration.MazeWorld.__init__()=grid.ai.rl.value_iteration.MazeWorld-class.html#__init__,Method grid.ai.rl.value_iteration.ValueIterationAgent.__init__()=grid.ai.rl.value_iteration.ValueIterationAgent-class.html#__init__,Method grid.model.maze_model.MazeModel.__init__()=grid.model.maze_model.MazeModel-class.html#__init__,Method grid.util.myturtle.RawTurtle.__init__()=grid.util.myturtle.RawTurtle-class.html#__init__,Method grid.util.myturtle.ScrolledCanvas.__init__()=grid.util.myturtle.ScrolledCanvas-class.html#__init__,Method grid.util.myturtle.Shape.__init__()=grid.util.myturtle.Shape-class.html#__init__,Method grid.util.myturtle.TNavigator.__init__()=grid.util.myturtle.TNavigator-class.html#__init__,Method grid.util.myturtle.TPen.__init__()=grid.util.myturtle.TPen-class.html#__init__,Method grid.util.myturtle.Tbuffer.__init__()=grid.util.myturtle.Tbuffer-class.html#__init__,Method grid.util.myturtle.Turtle.__init__()=grid.util.myturtle.Turtle-class.html#__init__,Method grid.util.myturtle.TurtleScreen.__init__()=grid.util.myturtle.TurtleScreen-class.html#__init__,Method grid.util.myturtle.TurtleScreenBase.__init__()=grid.util.myturtle.TurtleScreenBase-class.html#__init__,Method grid.util.myturtle._Root.__init__()=grid.util.myturtle._Root-class.html#__init__,Method grid.util.myturtle._Screen.__init__()=grid.util.myturtle._Screen-class.html#__init__,Method grid.util.myturtle._TurtleImage.__init__()=grid.util.myturtle._TurtleImage-class.html#__init__,Method grid.util.util.FixedRandom.__init__()=grid.util.util.FixedRandom-class.html#__init__,Method grid.util.util.PriorityQueue.__init__()=grid.util.util.PriorityQueue-class.html#__init__,Method grid.util.util.PriorityQueueWithFunction.__init__()=grid.util.util.PriorityQueueWithFunction-class.html#__init__,Method grid.util.util.Queue.__init__()=grid.util.util.Queue-class.html#__init__,Method grid.util.util.Stack.__init__()=grid.util.util.Stack-class.html#__init__,Method grid.util.util.TimeoutFunction.__init__()=grid.util.util.TimeoutFunction-class.html#__init__,Method maze.Maze.__init__()=maze.Maze-class.html#__init__,Method robot.Robot.__init__()=robot.Robot-class.html#__init__,Method slam_ui.SlamUi.__init__()=slam_ui.SlamUi-class.html#__init__"><a title="grid.ai.abstract_ai.AbstractAI.__init__
+grid.ai.ez.block_deadend.BlockDeadend.__init__
+grid.ai.ez.follow_wall.FollowWall.__init__
+grid.ai.ez.random_turn.RandomTurn.__init__
+grid.ai.ff.flood_fill.FloodFill.__init__
+grid.ai.gs.graph_search.GraphSearch.__init__
+grid.ai.gs.graph_search.PositionSearchProblem.__init__
+grid.ai.rl.q_learning.MazeEnvironment.__init__
+grid.ai.rl.q_learning.QLearningAgent.__init__
+grid.ai.rl.rl.ReinforcementLearning.__init__
+grid.ai.rl.value_iteration.MazeWorld.__init__
+grid.ai.rl.value_iteration.ValueIterationAgent.__init__
+grid.model.maze_model.MazeModel.__init__
+grid.util.myturtle.RawTurtle.__init__
+grid.util.myturtle.ScrolledCanvas.__init__
+grid.util.myturtle.Shape.__init__
+grid.util.myturtle.TNavigator.__init__
+grid.util.myturtle.TPen.__init__
+grid.util.myturtle.Tbuffer.__init__
+grid.util.myturtle.Turtle.__init__
+grid.util.myturtle.TurtleScreen.__init__
+grid.util.myturtle.TurtleScreenBase.__init__
+grid.util.myturtle._Root.__init__
+grid.util.myturtle._Screen.__init__
+grid.util.myturtle._TurtleImage.__init__
+grid.util.util.FixedRandom.__init__
+grid.util.util.PriorityQueue.__init__
+grid.util.util.PriorityQueueWithFunction.__init__
+grid.util.util.Queue.__init__
+grid.util.util.Stack.__init__
+grid.util.util.TimeoutFunction.__init__
+maze.Maze.__init__
+robot.Robot.__init__
+slam_ui.SlamUi.__init__" class="py-name" href="#" onclick="return doclink('link-14', '__init__', 'link-14');">__init__</a></tt><tt class="py-op">(</tt><tt id="link-15" class="py-name"><a title="grid.model.maze_model" class="py-name" href="#" onclick="return doclink('link-15', 'maze_model', 'link-6');">maze_model</a></tt><tt class="py-op">,</tt> <tt class="py-name">loc</tt><tt class="py-op">,</tt> <tt id="link-16" class="py-name" targets="Method grid.util.myturtle.TNavigator.heading()=grid.util.myturtle.TNavigator-class.html#heading,Function grid.util.myturtle.heading()=grid.util.myturtle-module.html#heading"><a title="grid.util.myturtle.TNavigator.heading
+grid.util.myturtle.heading" class="py-name" href="#" onclick="return doclink('link-16', 'heading', 'link-16');">heading</a></tt><tt class="py-op">,</tt> <tt class="py-name">ui</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"> </tt>
+<a name="FollowWall.title"></a><div id="FollowWall.title-def"><a name="L38"></a><tt class="py-lineno"> 38</tt> <a class="py-toggle" href="#" id="FollowWall.title-toggle" onclick="return toggle('FollowWall.title');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="grid.ai.ez.follow_wall.FollowWall-class.html#title">title</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FollowWall.title-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FollowWall.title-expanded"><a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-docstring">        Name of the AI algorithm that will be shown as title on UI screen </tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">"FOLLOW WALL"</tt> </tt>
+</div><a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">     </tt>
+<a name="FollowWall.canReset"></a><div id="FollowWall.canReset-def"><a name="L44"></a><tt class="py-lineno"> 44</tt> <a class="py-toggle" href="#" id="FollowWall.canReset-toggle" onclick="return toggle('FollowWall.canReset');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="grid.ai.ez.follow_wall.FollowWall-class.html#canReset">canReset</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FollowWall.canReset-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FollowWall.canReset-expanded"><a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-docstring">        Return whether AI algorithm is ready to reset. Follow Wall can never reset, as it never reaches the center.</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">         </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">x</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt> <tt class="py-keyword">and</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">y</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">            <tt class="py-name">loc</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">            <tt class="py-name">walls</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-17" class="py-name"><a title="grid.model.maze_model.Direction" class="py-name" href="#" onclick="return doclink('link-17', 'Direction', 'link-7');">Direction</a></tt><tt class="py-op">.</tt><tt id="link-18" class="py-name" targets="Variable grid.model.maze_model.Direction.Down=grid.model.maze_model.Direction-class.html#Down"><a title="grid.model.maze_model.Direction.Down" class="py-name" href="#" onclick="return doclink('link-18', 'Down', 'link-18');">Down</a></tt><tt class="py-op">.</tt><tt class="py-name">value</tt><tt class="py-op">]</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="grid.model.maze_model" class="py-name" href="#" onclick="return doclink('link-19', 'maze_model', 'link-6');">maze_model</a></tt><tt class="py-op">.</tt><tt id="link-20" class="py-name" targets="Method grid.model.maze_model.MazeModel.setWall()=grid.model.maze_model.MazeModel-class.html#setWall"><a title="grid.model.maze_model.MazeModel.setWall" class="py-name" href="#" onclick="return doclink('link-20', 'setWall', 'link-20');">setWall</a></tt><tt class="py-op">(</tt><tt class="py-name">loc</tt><tt class="py-op">,</tt> <tt id="link-21" class="py-name"><a title="grid.model.maze_model.Direction" class="py-name" href="#" onclick="return doclink('link-21', 'Direction', 'link-7');">Direction</a></tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="grid.model.maze_model.Direction.Down" class="py-name" href="#" onclick="return doclink('link-22', 'Down', 'link-18');">Down</a></tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Method grid.ai.abstract_ai.AbstractAI.signalUi()=grid.ai.abstract_ai.AbstractAI-class.html#signalUi,Method grid.model.maze_model.MazeModel.signalUi()=grid.model.maze_model.MazeModel-class.html#signalUi"><a title="grid.ai.abstract_ai.AbstractAI.signalUi
+grid.model.maze_model.MazeModel.signalUi" class="py-name" href="#" onclick="return doclink('link-23', 'signalUi', 'link-23');">signalUi</a></tt><tt class="py-op">(</tt><tt class="py-op">{</tt><tt class="py-string">'command'</tt><tt class="py-op">:</tt> <tt class="py-string">'cell-explored'</tt><tt class="py-op">,</tt> <tt class="py-string">'loc'</tt><tt class="py-op">:</tt> <tt class="py-name">loc</tt><tt class="py-op">,</tt> <tt class="py-string">'walls'</tt><tt class="py-op">:</tt> <tt class="py-name">walls</tt><tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="grid.ai.abstract_ai.AbstractAI.signalUi
+grid.model.maze_model.MazeModel.signalUi" class="py-name" href="#" onclick="return doclink('link-24', 'signalUi', 'link-23');">signalUi</a></tt><tt class="py-op">(</tt><tt class="py-op">{</tt><tt class="py-string">'command'</tt><tt class="py-op">:</tt> <tt class="py-string">'erase-path-current'</tt> <tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name"><a title="grid.ai.abstract_ai.AbstractAI.signalUi
+grid.model.maze_model.MazeModel.signalUi" class="py-name" href="#" onclick="return doclink('link-25', 'signalUi', 'link-23');">signalUi</a></tt><tt class="py-op">(</tt><tt class="py-op">{</tt><tt class="py-string">'command'</tt><tt class="py-op">:</tt> <tt class="py-string">'draw-path-current'</tt><tt class="py-op">,</tt> <tt class="py-string">'path_current'</tt><tt class="py-op">:</tt> <tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-number">90</tt><tt class="py-op">,</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name"><a title="grid.util.myturtle.TNavigator.heading
+grid.util.myturtle.heading" class="py-name" href="#" onclick="return doclink('link-26', 'heading', 'link-16');">heading</a></tt><tt class="py-op">.</tt><tt class="py-name">value</tt><tt class="py-op">)</tt> <tt class="py-op">}</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">             </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name"><a title="grid.ai.ez.follow_wall" class="py-name" href="#" onclick="return doclink('link-27', 'follow_wall', 'link-8');">follow_wall</a></tt> <tt class="py-op">=</tt> <tt class="py-name">random</tt><tt class="py-op">.</tt><tt class="py-name">choice</tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt id="link-28" class="py-name"><a title="grid.model.maze_model.Direction" class="py-name" href="#" onclick="return doclink('link-28', 'Direction', 'link-7');">Direction</a></tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="grid.model.maze_model.Direction.Left" class="py-name" href="#" onclick="return doclink('link-29', 'Left', 'link-10');">Left</a></tt><tt class="py-op">,</tt> <tt id="link-30" class="py-name"><a title="grid.model.maze_model.Direction" class="py-name" href="#" onclick="return doclink('link-30', 'Direction', 'link-7');">Direction</a></tt><tt class="py-op">.</tt><tt id="link-31" class="py-name"><a title="grid.model.maze_model.Direction.Right" class="py-name" href="#" onclick="return doclink('link-31', 'Right', 'link-12');">Right</a></tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">             </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">            </tt>
+<a name="FollowWall.currentPathDrawTail"></a><div id="FollowWall.currentPathDrawTail-def"><a name="L61"></a><tt class="py-lineno"> 61</tt> <a class="py-toggle" href="#" id="FollowWall.currentPathDrawTail-toggle" onclick="return toggle('FollowWall.currentPathDrawTail');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="grid.ai.ez.follow_wall.FollowWall-class.html#currentPathDrawTail">currentPathDrawTail</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FollowWall.currentPathDrawTail-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FollowWall.currentPathDrawTail-expanded"><a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring">        Specify whether to show turtle tail. Follow Wall shows tail for current path</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">  </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">    <tt class="py-comment"># look for bias</tt> </tt>
+<a name="FollowWall.getBestDirection"></a><div id="FollowWall.getBestDirection-def"><a name="L68"></a><tt class="py-lineno"> 68</tt> <a class="py-toggle" href="#" id="FollowWall.getBestDirection-toggle" onclick="return toggle('FollowWall.getBestDirection');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="grid.ai.ez.follow_wall.FollowWall-class.html#getBestDirection">getBestDirection</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sensors</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="FollowWall.getBestDirection-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="FollowWall.getBestDirection-expanded"><a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-docstring">        Return the best next direction based on sensor data. In Follow Wall, robot simply grazes along the outer wall of the maze.</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-docstring">        @param sensors: Sensor inputs are a list of three distances from the robot's left, front, and right-facing sensors, in that order.</tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-docstring">        @type sensors: array containing three distances from three walls.</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">         </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">        <tt class="py-name">my_right</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name" targets="Variable grid.ai.abstract_ai.AbstractAI.dir_right=grid.ai.abstract_ai.AbstractAI-class.html#dir_right"><a title="grid.ai.abstract_ai.AbstractAI.dir_right" class="py-name" href="#" onclick="return doclink('link-32', 'dir_right', 'link-32');">dir_right</a></tt><tt class="py-op">[</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name"><a title="grid.util.myturtle.TNavigator.heading
+grid.util.myturtle.heading" class="py-name" href="#" onclick="return doclink('link-33', 'heading', 'link-16');">heading</a></tt><tt class="py-op">]</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">        <tt class="py-name">my_left</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name" targets="Variable grid.ai.abstract_ai.AbstractAI.dir_left=grid.ai.abstract_ai.AbstractAI-class.html#dir_left"><a title="grid.ai.abstract_ai.AbstractAI.dir_left" class="py-name" href="#" onclick="return doclink('link-34', 'dir_left', 'link-34');">dir_left</a></tt><tt class="py-op">[</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name"><a title="grid.util.myturtle.TNavigator.heading
+grid.util.myturtle.heading" class="py-name" href="#" onclick="return doclink('link-35', 'heading', 'link-16');">heading</a></tt><tt class="py-op">]</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">         </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-name">openings</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">i</tt><tt class="py-op">,</tt> <tt class="py-name">reading</tt> <tt class="py-keyword">in</tt> <tt class="py-name">enumerate</tt><tt class="py-op">(</tt><tt class="py-name">sensors</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">reading</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">                <tt class="py-name">opening</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-36" class="py-name" targets="Variable grid.ai.abstract_ai.AbstractAI.dir_sensors=grid.ai.abstract_ai.AbstractAI-class.html#dir_sensors,Variable grid.model.maze_model.MazeModel.dir_sensors=grid.model.maze_model.MazeModel-class.html#dir_sensors,Variable tester.dir_sensors=tester-module.html#dir_sensors"><a title="grid.ai.abstract_ai.AbstractAI.dir_sensors
+grid.model.maze_model.MazeModel.dir_sensors
+tester.dir_sensors" class="py-name" href="#" onclick="return doclink('link-36', 'dir_sensors', 'link-36');">dir_sensors</a></tt><tt class="py-op">[</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="grid.util.myturtle.TNavigator.heading
+grid.util.myturtle.heading" class="py-name" href="#" onclick="return doclink('link-37', 'heading', 'link-16');">heading</a></tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">                <tt class="py-name">openings</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">opening</tt><tt class="py-op">)</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line">         </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">        <tt class="py-comment"># no choice turn</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">openings</tt><tt class="py-op">)</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name" targets="Variable grid.ai.abstract_ai.AbstractAI.dir_reverse=grid.ai.abstract_ai.AbstractAI-class.html#dir_reverse,Variable tester.dir_reverse=tester-module.html#dir_reverse"><a title="grid.ai.abstract_ai.AbstractAI.dir_reverse
+tester.dir_reverse" class="py-name" href="#" onclick="return doclink('link-38', 'dir_reverse', 'link-38');">dir_reverse</a></tt><tt class="py-op">[</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-39" class="py-name"><a title="grid.util.myturtle.TNavigator.heading
+grid.util.myturtle.heading" class="py-name" href="#" onclick="return doclink('link-39', 'heading', 'link-16');">heading</a></tt><tt class="py-op">]</tt>  <tt class="py-comment"># go reverse</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">         </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt class="py-comment"># preferred turn</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name"><a title="grid.ai.ez.follow_wall" class="py-name" href="#" onclick="return doclink('link-40', 'follow_wall', 'link-8');">follow_wall</a></tt> <tt class="py-op">==</tt> <tt id="link-41" class="py-name"><a title="grid.model.maze_model.Direction" class="py-name" href="#" onclick="return doclink('link-41', 'Direction', 'link-7');">Direction</a></tt><tt class="py-op">.</tt><tt id="link-42" class="py-name"><a title="grid.model.maze_model.Direction.Right" class="py-name" href="#" onclick="return doclink('link-42', 'Right', 'link-12');">Right</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">my_right</tt> <tt class="py-keyword">in</tt> <tt class="py-name">openings</tt><tt class="py-op">:</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">my_right</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">         </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">        <tt class="py-comment"># preferred turn</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-43" class="py-name"><a title="grid.ai.ez.follow_wall" class="py-name" href="#" onclick="return doclink('link-43', 'follow_wall', 'link-8');">follow_wall</a></tt> <tt class="py-op">==</tt> <tt id="link-44" class="py-name"><a title="grid.model.maze_model.Direction" class="py-name" href="#" onclick="return doclink('link-44', 'Direction', 'link-7');">Direction</a></tt><tt class="py-op">.</tt><tt id="link-45" class="py-name"><a title="grid.model.maze_model.Direction.Left" class="py-name" href="#" onclick="return doclink('link-45', 'Left', 'link-10');">Left</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">my_left</tt> <tt class="py-keyword">in</tt> <tt class="py-name">openings</tt><tt class="py-op">:</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">                <tt class="py-keyword">return</tt> <tt class="py-name">my_left</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">             </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">        <tt class="py-comment"># default turns</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-46" class="py-name"><a title="grid.util.myturtle.TNavigator.heading
+grid.util.myturtle.heading" class="py-name" href="#" onclick="return doclink('link-46', 'heading', 'link-16');">heading</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">openings</tt><tt class="py-op">:</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-47" class="py-name"><a title="grid.util.myturtle.TNavigator.heading
+grid.util.myturtle.heading" class="py-name" href="#" onclick="return doclink('link-47', 'heading', 'link-16');">heading</a></tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">            <tt class="py-keyword">return</tt> <tt class="py-name">my_left</tt> <tt class="py-keyword">if</tt> <tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-48" class="py-name"><a title="grid.ai.ez.follow_wall" class="py-name" href="#" onclick="return doclink('link-48', 'follow_wall', 'link-8');">follow_wall</a></tt> <tt class="py-op">==</tt> <tt id="link-49" class="py-name"><a title="grid.model.maze_model.Direction" class="py-name" href="#" onclick="return doclink('link-49', 'Direction', 'link-7');">Direction</a></tt><tt class="py-op">.</tt><tt id="link-50" class="py-name"><a title="grid.model.maze_model.Direction.Right" class="py-name" href="#" onclick="return doclink('link-50', 'Right', 'link-12');">Right</a></tt><tt class="py-op">)</tt> <tt class="py-keyword">else</tt> <tt class="py-name">my_right</tt> </tt>
+</div></div><a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Nov  2 22:10:03 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

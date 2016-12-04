@@ -1,0 +1,22 @@
+
+
+# To run the tester
+
+python tester.py test_maze_01.txt
+
+
+# To run the flood fill with 2016 world championship maze
+
+python tester.py taiwan-2016-world-championship.txt
+
+
+# To visualize a maze
+
+python showmaze.py test_maze_01.txt
+
+
+
+# Generate python docs for the project in folder 'docs/pydoc' in current dir
+
+epydoc tester.py maze.py showmaze.py robot.py slam_ui.py grid -o docs/pydoc
+

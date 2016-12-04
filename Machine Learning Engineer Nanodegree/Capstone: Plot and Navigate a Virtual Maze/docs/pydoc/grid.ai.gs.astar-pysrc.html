@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>grid.ai.gs.astar</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="grid-module.html">Package&nbsp;grid</a> ::
+        <a href="grid.ai-module.html">Package&nbsp;ai</a> ::
+        <a href="grid.ai.gs-module.html">Package&nbsp;gs</a> ::
+        Module&nbsp;astar
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="grid.ai.gs.astar-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="grid.ai.gs.astar-module.html">Module grid.ai.gs.astar</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment"># Copyright (C) 2016 - Srikanth Pagadala, Conscious Computing</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-comment"># email: srikanth.pagadala@gmail.com</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Package grid=grid-module.html"><a title="grid" class="py-name" href="#" onclick="return doclink('link-0', 'grid', 'link-0');">grid</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Package grid.ai=grid.ai-module.html"><a title="grid.ai" class="py-name" href="#" onclick="return doclink('link-1', 'ai', 'link-1');">ai</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Package grid.ai.gs=grid.ai.gs-module.html"><a title="grid.ai.gs" class="py-name" href="#" onclick="return doclink('link-2', 'gs', 'link-2');">gs</a></tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Module grid.ai.gs.graph_search=grid.ai.gs.graph_search-module.html"><a title="grid.ai.gs.graph_search" class="py-name" href="#" onclick="return doclink('link-3', 'graph_search', 'link-3');">graph_search</a></tt> <tt class="py-keyword">import</tt> <tt id="link-4" class="py-name" targets="Class grid.ai.gs.graph_search.GraphSearch=grid.ai.gs.graph_search.GraphSearch-class.html"><a title="grid.ai.gs.graph_search.GraphSearch" class="py-name" href="#" onclick="return doclink('link-4', 'GraphSearch', 'link-4');">GraphSearch</a></tt><tt class="py-op">,</tt> <tt id="link-5" class="py-name" targets="Class grid.ai.gs.graph_search.PositionSearchProblem=grid.ai.gs.graph_search.PositionSearchProblem-class.html"><a title="grid.ai.gs.graph_search.PositionSearchProblem" class="py-name" href="#" onclick="return doclink('link-5', 'PositionSearchProblem', 'link-5');">PositionSearchProblem</a></tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-6" class="py-name"><a title="grid" class="py-name" href="#" onclick="return doclink('link-6', 'grid', 'link-0');">grid</a></tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Package grid.util=grid.util-module.html,Module grid.util.util=grid.util.util-module.html"><a title="grid.util
+grid.util.util" class="py-name" href="#" onclick="return doclink('link-7', 'util', 'link-7');">util</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name"><a title="grid.util
+grid.util.util" class="py-name" href="#" onclick="return doclink('link-8', 'util', 'link-7');">util</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"> </tt>
+<a name="AstarSearch"></a><div id="AstarSearch-def"><a name="L8"></a><tt class="py-lineno"> 8</tt> <a class="py-toggle" href="#" id="AstarSearch-toggle" onclick="return toggle('AstarSearch');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="grid.ai.gs.astar.AstarSearch-class.html">AstarSearch</a><tt class="py-op">(</tt><tt class="py-base-class">GraphSearch</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AstarSearch-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="AstarSearch-expanded"><a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line">    <tt class="py-docstring">'''</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-docstring">    A* is an informed search algorithm, or a best-first search, meaning that it solves </tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-docstring">    problems by searching among all possible paths to the solution for the one that </tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-docstring">    incurs the smallest cost (least distance travelled, shortest time, etc.), and among </tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-docstring">    these paths it first considers the ones that appear to lead most quickly to the solution. </tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-docstring">    It is formulated in terms of weighted graphs: starting from a specific node of a graph, </tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-docstring">    it constructs a tree of paths starting from that node, expanding paths one step at a time, </tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-docstring">    until one of its paths ends at the predetermined goal node.</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-docstring">    </tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-docstring">    At each iteration of its main loop, A* needs to determine which of its partial paths to </tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"><tt class="py-docstring">    expand into one or more longer paths. It does so based on an estimate of the cost (total weight) </tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-docstring">    still to go to the goal node. Specifically, A* selects the path that minimizes</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"><tt class="py-docstring">    f(n) = g(n) + h(n)</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"><tt class="py-docstring"></tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"><tt class="py-docstring">    where n is the last node on the path, g(n) is the cost of the path from the start node to n, </tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"><tt class="py-docstring">    and h(n) is a heuristic that estimates the cost of the cheapest path from n to the goal. </tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"><tt class="py-docstring">    The heuristic is problem-specific. For the algorithm to find the actual shortest path, the heuristic </tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"><tt class="py-docstring">    function must be admissible, meaning that it never overestimates the actual cost to get to the </tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"><tt class="py-docstring">    nearest goal node. Typical implementations of A* use a priority queue to perform the repeated </tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"><tt class="py-docstring">    selection of minimum (estimated) cost nodes to expand.</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"><tt class="py-docstring">    '''</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"> </tt>
+<a name="AstarSearch.title"></a><div id="AstarSearch.title-def"><a name="L32"></a><tt class="py-lineno">32</tt> <a class="py-toggle" href="#" id="AstarSearch.title-toggle" onclick="return toggle('AstarSearch.title');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="grid.ai.gs.astar.AstarSearch-class.html#title">title</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AstarSearch.title-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AstarSearch.title-expanded"><a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"><tt class="py-docstring">        Name of the AI algorithm that will be shown as title on UI screen </tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">"GRAPH SEARCH: A-STAR SEARCH, manhattanHeuristic"</tt> </tt>
+</div><a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">     </tt>
+<a name="AstarSearch.beforeReset"></a><div id="AstarSearch.beforeReset-def"><a name="L38"></a><tt class="py-lineno">38</tt> <a class="py-toggle" href="#" id="AstarSearch.beforeReset-toggle" onclick="return toggle('AstarSearch.beforeReset');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="grid.ai.gs.astar.AstarSearch-class.html#beforeReset">beforeReset</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AstarSearch.beforeReset-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AstarSearch.beforeReset-expanded"><a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line"><tt class="py-docstring">        A callback function that gives AI algorithm an opportunity to perform any last minute </tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line"><tt class="py-docstring">        calculations before sending (reset, reset) signal to Tester. A* algo performs graph search</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line"><tt class="py-docstring">        and comes up with a path from start to goal before reseting.</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">         </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">        <tt class="py-name">problem</tt> <tt class="py-op">=</tt> <tt id="link-9" class="py-name"><a title="grid.ai.gs.graph_search.PositionSearchProblem" class="py-name" href="#" onclick="return doclink('link-9', 'PositionSearchProblem', 'link-5');">PositionSearchProblem</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Module grid.model.maze_model=grid.model.maze_model-module.html"><a title="grid.model.maze_model" class="py-name" href="#" onclick="return doclink('link-10', 'maze_model', 'link-10');">maze_model</a></tt><tt class="py-op">,</tt> <tt class="py-name">goal</tt><tt class="py-op">=</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">goalLoc</tt><tt class="py-op">)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">        <tt class="py-name">cost</tt> <tt class="py-op">=</tt> <tt class="py-keyword">lambda</tt> <tt class="py-name">aPath</tt><tt class="py-op">:</tt> <tt class="py-name">problem</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Method grid.ai.gs.graph_search.PositionSearchProblem.getCostOfActions()=grid.ai.gs.graph_search.PositionSearchProblem-class.html#getCostOfActions"><a title="grid.ai.gs.graph_search.PositionSearchProblem.getCostOfActions" class="py-name" href="#" onclick="return doclink('link-11', 'getCostOfActions', 'link-11');">getCostOfActions</a></tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-name">x</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> <tt class="py-keyword">for</tt> <tt class="py-name">x</tt> <tt class="py-keyword">in</tt> <tt class="py-name">aPath</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method grid.ai.gs.astar.AstarSearch.manhattanHeuristic()=grid.ai.gs.astar.AstarSearch-class.html#manhattanHeuristic"><a title="grid.ai.gs.astar.AstarSearch.manhattanHeuristic" class="py-name" href="#" onclick="return doclink('link-12', 'manhattanHeuristic', 'link-12');">manhattanHeuristic</a></tt><tt class="py-op">(</tt><tt class="py-name">aPath</tt><tt class="py-op">[</tt><tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">aPath</tt><tt class="py-op">)</tt> <tt class="py-op">-</tt> <tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-name">problem</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">        <tt class="py-name">frontier</tt> <tt class="py-op">=</tt> <tt id="link-13" class="py-name" targets="Class grid.util.util.PriorityQueueWithFunction=grid.util.util.PriorityQueueWithFunction-class.html"><a title="grid.util.util.PriorityQueueWithFunction" class="py-name" href="#" onclick="return doclink('link-13', 'PriorityQueueWithFunction', 'link-13');">PriorityQueueWithFunction</a></tt><tt class="py-op">(</tt><tt class="py-name">cost</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">         </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">searched_path</tt> <tt class="py-op">=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Method grid.ai.gs.graph_search.GraphSearch.graphSearch()=grid.ai.gs.graph_search.GraphSearch-class.html#graphSearch"><a title="grid.ai.gs.graph_search.GraphSearch.graphSearch" class="py-name" href="#" onclick="return doclink('link-14', 'graphSearch', 'link-14');">graphSearch</a></tt><tt class="py-op">(</tt><tt class="py-name">problem</tt><tt class="py-op">,</tt> <tt class="py-name">frontier</tt><tt class="py-op">)</tt>  </tt>
+</div><a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">         </tt>
+<a name="AstarSearch.nullHeuristic"></a><div id="AstarSearch.nullHeuristic-def"><a name="L52"></a><tt class="py-lineno">52</tt> <a class="py-toggle" href="#" id="AstarSearch.nullHeuristic-toggle" onclick="return toggle('AstarSearch.nullHeuristic');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="grid.ai.gs.astar.AstarSearch-class.html#nullHeuristic">nullHeuristic</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">state</tt><tt class="py-op">,</tt> <tt class="py-param">problem</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AstarSearch.nullHeuristic-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AstarSearch.nullHeuristic-expanded"><a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"><tt class="py-docstring">        Blank heuristic for a PositionSearchProblem. A heuristic function estimates the cost from </tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line"><tt class="py-docstring">        the current state to the nearest goal in the provided SearchProblem. This heuristic is trivial.</tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line"><tt class="py-docstring">        @param position: current cell</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line"><tt class="py-docstring">        @type position: [0, 0], python array</tt> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line"><tt class="py-docstring">        @param problem: given PositionSearchProblem instance</tt> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line"><tt class="py-docstring">        @type problem: grid.ai.gs.graph_search.PositionSearchProblem</tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line">         </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-number">0</tt> </tt>
+</div><a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">     </tt>
+<a name="AstarSearch.manhattanHeuristic"></a><div id="AstarSearch.manhattanHeuristic-def"><a name="L65"></a><tt class="py-lineno">65</tt> <a class="py-toggle" href="#" id="AstarSearch.manhattanHeuristic-toggle" onclick="return toggle('AstarSearch.manhattanHeuristic');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="grid.ai.gs.astar.AstarSearch-class.html#manhattanHeuristic">manhattanHeuristic</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">position</tt><tt class="py-op">,</tt> <tt class="py-param">problem</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AstarSearch.manhattanHeuristic-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AstarSearch.manhattanHeuristic-expanded"><a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line"><tt class="py-docstring">        The Manhattan distance heuristic for a PositionSearchProblem</tt> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line"><tt class="py-docstring">        @param position: current cell</tt> </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line"><tt class="py-docstring">        @type position: [0, 0], python array</tt> </tt>
+<a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line"><tt class="py-docstring">        @param problem: given PositionSearchProblem instance</tt> </tt>
+<a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line"><tt class="py-docstring">        @type problem: grid.ai.gs.graph_search.PositionSearchProblem</tt> </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line">        <tt class="py-name">xy1</tt> <tt class="py-op">=</tt> <tt id="link-15" class="py-name" targets="Function grid.util.myturtle.position()=grid.util.myturtle-module.html#position"><a title="grid.util.myturtle.position" class="py-name" href="#" onclick="return doclink('link-15', 'position', 'link-15');">position</a></tt> </tt>
+<a name="L75"></a><tt class="py-lineno">75</tt>  <tt class="py-line">        <tt class="py-name">xy2</tt> <tt class="py-op">=</tt> <tt class="py-name">problem</tt><tt class="py-op">.</tt><tt class="py-name">goal</tt> </tt>
+<a name="L76"></a><tt class="py-lineno">76</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">abs</tt><tt class="py-op">(</tt><tt class="py-name">xy1</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">-</tt> <tt class="py-name">xy2</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> <tt class="py-op">+</tt> <tt class="py-name">abs</tt><tt class="py-op">(</tt><tt class="py-name">xy1</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> <tt class="py-op">-</tt> <tt class="py-name">xy2</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L77"></a><tt class="py-lineno">77</tt>  <tt class="py-line"> </tt>
+<a name="AstarSearch.euclideanHeuristic"></a><div id="AstarSearch.euclideanHeuristic-def"><a name="L78"></a><tt class="py-lineno">78</tt> <a class="py-toggle" href="#" id="AstarSearch.euclideanHeuristic-toggle" onclick="return toggle('AstarSearch.euclideanHeuristic');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="grid.ai.gs.astar.AstarSearch-class.html#euclideanHeuristic">euclideanHeuristic</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">position</tt><tt class="py-op">,</tt> <tt class="py-param">problem</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="AstarSearch.euclideanHeuristic-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="AstarSearch.euclideanHeuristic-expanded"><a name="L79"></a><tt class="py-lineno">79</tt>  <tt class="py-line">        <tt class="py-docstring">'''</tt> </tt>
+<a name="L80"></a><tt class="py-lineno">80</tt>  <tt class="py-line"><tt class="py-docstring">        The Euclidean distance heuristic for a PositionSearchProblem</tt> </tt>
+<a name="L81"></a><tt class="py-lineno">81</tt>  <tt class="py-line"><tt class="py-docstring">        </tt> </tt>
+<a name="L82"></a><tt class="py-lineno">82</tt>  <tt class="py-line"><tt class="py-docstring">        @param position: current cell</tt> </tt>
+<a name="L83"></a><tt class="py-lineno">83</tt>  <tt class="py-line"><tt class="py-docstring">        @type position: [0, 0], python array</tt> </tt>
+<a name="L84"></a><tt class="py-lineno">84</tt>  <tt class="py-line"><tt class="py-docstring">        @param problem: given PositionSearchProblem instance</tt> </tt>
+<a name="L85"></a><tt class="py-lineno">85</tt>  <tt class="py-line"><tt class="py-docstring">        @type problem: grid.ai.gs.graph_search.PositionSearchProblem</tt> </tt>
+<a name="L86"></a><tt class="py-lineno">86</tt>  <tt class="py-line"><tt class="py-docstring">        '''</tt> </tt>
+<a name="L87"></a><tt class="py-lineno">87</tt>  <tt class="py-line"> </tt>
+<a name="L88"></a><tt class="py-lineno">88</tt>  <tt class="py-line">        <tt class="py-name">xy1</tt> <tt class="py-op">=</tt> <tt id="link-16" class="py-name"><a title="grid.util.myturtle.position" class="py-name" href="#" onclick="return doclink('link-16', 'position', 'link-15');">position</a></tt> </tt>
+<a name="L89"></a><tt class="py-lineno">89</tt>  <tt class="py-line">        <tt class="py-name">xy2</tt> <tt class="py-op">=</tt> <tt class="py-name">problem</tt><tt class="py-op">.</tt><tt class="py-name">goal</tt> </tt>
+<a name="L90"></a><tt class="py-lineno">90</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-op">(</tt><tt class="py-op">(</tt><tt class="py-name">xy1</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">-</tt> <tt class="py-name">xy2</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> <tt class="py-op">**</tt> <tt class="py-number">2</tt> <tt class="py-op">+</tt> <tt class="py-op">(</tt><tt class="py-name">xy1</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt> <tt class="py-op">-</tt> <tt class="py-name">xy2</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> <tt class="py-op">**</tt> <tt class="py-number">2</tt><tt class="py-op">)</tt> <tt class="py-op">**</tt> <tt class="py-number">0.5</tt> </tt>
+</div></div><a name="L91"></a><tt class="py-lineno">91</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Nov  2 22:10:02 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

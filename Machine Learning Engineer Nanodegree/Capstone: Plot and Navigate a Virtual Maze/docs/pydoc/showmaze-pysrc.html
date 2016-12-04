@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>showmaze</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Module&nbsp;showmaze
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="showmaze-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="showmaze-module.html">Module showmaze</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module maze=maze-module.html"><a title="maze" class="py-name" href="#" onclick="return doclink('link-0', 'maze', 'link-0');">maze</a></tt> <tt class="py-keyword">import</tt> <tt id="link-1" class="py-name" targets="Class maze.Maze=maze.Maze-class.html"><a title="maze.Maze" class="py-name" href="#" onclick="return doclink('link-1', 'Maze', 'link-1');">Maze</a></tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">turtle</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">__name__</tt> <tt class="py-op">==</tt> <tt class="py-string">'__main__'</tt><tt class="py-op">:</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line">    <tt class="py-string">'''</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-string">    This function uses Python's turtle library to draw a picture of the maze</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-string">    given as an argument when running the script.</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-string">    '''</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line">    <tt class="py-comment"># Create a maze based on input argument on command line.</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line">    <tt class="py-name">testmaze</tt> <tt class="py-op">=</tt> <tt id="link-2" class="py-name"><a title="maze.Maze" class="py-name" href="#" onclick="return doclink('link-2', 'Maze', 'link-1');">Maze</a></tt><tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">argv</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line">    <tt class="py-comment"># Intialize the window and drawing turtle.</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">    <tt class="py-name">window</tt> <tt class="py-op">=</tt> <tt class="py-name">turtle</tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Function grid.util.myturtle.Screen()=grid.util.myturtle-module.html#Screen"><a title="grid.util.myturtle.Screen" class="py-name" href="#" onclick="return doclink('link-3', 'Screen', 'link-3');">Screen</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line">    <tt class="py-name">window</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Method grid.util.myturtle.RawTurtle.tracer()=grid.util.myturtle.RawTurtle-class.html#tracer,Method grid.util.myturtle.TNavigator.tracer()=grid.util.myturtle.TNavigator-class.html#tracer,Method grid.util.myturtle.TurtleScreen.tracer()=grid.util.myturtle.TurtleScreen-class.html#tracer,Function grid.util.myturtle.tracer()=grid.util.myturtle-module.html#tracer"><a title="grid.util.myturtle.RawTurtle.tracer
+grid.util.myturtle.TNavigator.tracer
+grid.util.myturtle.TurtleScreen.tracer
+grid.util.myturtle.tracer" class="py-name" href="#" onclick="return doclink('link-4', 'tracer', 'link-4');">tracer</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line">    <tt class="py-name">wally</tt> <tt class="py-op">=</tt> <tt class="py-name">turtle</tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Class grid.util.myturtle.Turtle=grid.util.myturtle.Turtle-class.html"><a title="grid.util.myturtle.Turtle" class="py-name" href="#" onclick="return doclink('link-5', 'Turtle', 'link-5');">Turtle</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">    <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Method grid.util.myturtle.TNavigator.speed()=grid.util.myturtle.TNavigator-class.html#speed,Method grid.util.myturtle.TPen.speed()=grid.util.myturtle.TPen-class.html#speed,Function grid.util.myturtle.speed()=grid.util.myturtle-module.html#speed"><a title="grid.util.myturtle.TNavigator.speed
+grid.util.myturtle.TPen.speed
+grid.util.myturtle.speed" class="py-name" href="#" onclick="return doclink('link-6', 'speed', 'link-6');">speed</a></tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">    <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Method grid.util.myturtle.TPen.hideturtle()=grid.util.myturtle.TPen-class.html#hideturtle,Function grid.util.myturtle.hideturtle()=grid.util.myturtle-module.html#hideturtle"><a title="grid.util.myturtle.TPen.hideturtle
+grid.util.myturtle.hideturtle" class="py-name" href="#" onclick="return doclink('link-7', 'hideturtle', 'link-7');">hideturtle</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">    <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-8" class="py-name" targets="Method grid.util.myturtle.TPen.penup()=grid.util.myturtle.TPen-class.html#penup,Function grid.util.myturtle.penup()=grid.util.myturtle-module.html#penup"><a title="grid.util.myturtle.TPen.penup
+grid.util.myturtle.penup" class="py-name" href="#" onclick="return doclink('link-8', 'penup', 'link-8');">penup</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">    <tt class="py-comment"># maze centered on (0,0), squares are 20 units in length.</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">    <tt class="py-name">sq_size</tt> <tt class="py-op">=</tt> <tt class="py-number">30</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">    <tt class="py-name">origin</tt> <tt class="py-op">=</tt> <tt class="py-name">testmaze</tt><tt class="py-op">.</tt><tt class="py-name">dim</tt> <tt class="py-op">*</tt> <tt class="py-name">sq_size</tt> <tt class="py-op">/</tt> <tt class="py-op">-</tt><tt class="py-number">2</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">    <tt class="py-comment"># iterate through squares one by one to decide where to draw walls</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">x</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-name">testmaze</tt><tt class="py-op">.</tt><tt class="py-name">dim</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt class="py-name">y</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-name">testmaze</tt><tt class="py-op">.</tt><tt class="py-name">dim</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">testmaze</tt><tt class="py-op">.</tt><tt id="link-9" class="py-name" targets="Method maze.Maze.is_permissible()=maze.Maze-class.html#is_permissible"><a title="maze.Maze.is_permissible" class="py-name" href="#" onclick="return doclink('link-9', 'is_permissible', 'link-9');">is_permissible</a></tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-string">'up'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-10" class="py-name" targets="Method grid.util.myturtle.TNavigator.goto()=grid.util.myturtle.TNavigator-class.html#goto,Function grid.util.myturtle.goto()=grid.util.myturtle-module.html#goto"><a title="grid.util.myturtle.TNavigator.goto
+grid.util.myturtle.goto" class="py-name" href="#" onclick="return doclink('link-10', 'goto', 'link-10');">goto</a></tt><tt class="py-op">(</tt><tt class="py-name">origin</tt> <tt class="py-op">+</tt> <tt class="py-name">sq_size</tt> <tt class="py-op">*</tt> <tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">origin</tt> <tt class="py-op">+</tt> <tt class="py-name">sq_size</tt> <tt class="py-op">*</tt> <tt class="py-op">(</tt><tt class="py-name">y</tt> <tt class="py-op">+</tt> <tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-11" class="py-name" targets="Method grid.util.myturtle.TNavigator.setheading()=grid.util.myturtle.TNavigator-class.html#setheading,Function grid.util.myturtle.setheading()=grid.util.myturtle-module.html#setheading"><a title="grid.util.myturtle.TNavigator.setheading
+grid.util.myturtle.setheading" class="py-name" href="#" onclick="return doclink('link-11', 'setheading', 'link-11');">setheading</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method grid.util.myturtle.TPen.pendown()=grid.util.myturtle.TPen-class.html#pendown,Function grid.util.myturtle.pendown()=grid.util.myturtle-module.html#pendown"><a title="grid.util.myturtle.TPen.pendown
+grid.util.myturtle.pendown" class="py-name" href="#" onclick="return doclink('link-12', 'pendown', 'link-12');">pendown</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Method grid.util.myturtle.TNavigator.forward()=grid.util.myturtle.TNavigator-class.html#forward,Function grid.util.myturtle.forward()=grid.util.myturtle-module.html#forward"><a title="grid.util.myturtle.TNavigator.forward
+grid.util.myturtle.forward" class="py-name" href="#" onclick="return doclink('link-13', 'forward', 'link-13');">forward</a></tt><tt class="py-op">(</tt><tt class="py-name">sq_size</tt><tt class="py-op">)</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name"><a title="grid.util.myturtle.TPen.penup
+grid.util.myturtle.penup" class="py-name" href="#" onclick="return doclink('link-14', 'penup', 'link-8');">penup</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"> </tt>
+<a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">testmaze</tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="maze.Maze.is_permissible" class="py-name" href="#" onclick="return doclink('link-15', 'is_permissible', 'link-9');">is_permissible</a></tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-string">'right'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-16" class="py-name"><a title="grid.util.myturtle.TNavigator.goto
+grid.util.myturtle.goto" class="py-name" href="#" onclick="return doclink('link-16', 'goto', 'link-10');">goto</a></tt><tt class="py-op">(</tt><tt class="py-name">origin</tt> <tt class="py-op">+</tt> <tt class="py-name">sq_size</tt> <tt class="py-op">*</tt> <tt class="py-op">(</tt><tt class="py-name">x</tt> <tt class="py-op">+</tt> <tt class="py-number">1</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-name">origin</tt> <tt class="py-op">+</tt> <tt class="py-name">sq_size</tt> <tt class="py-op">*</tt> <tt class="py-name">y</tt><tt class="py-op">)</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-17" class="py-name"><a title="grid.util.myturtle.TNavigator.setheading
+grid.util.myturtle.setheading" class="py-name" href="#" onclick="return doclink('link-17', 'setheading', 'link-11');">setheading</a></tt><tt class="py-op">(</tt><tt class="py-number">90</tt><tt class="py-op">)</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-18" class="py-name"><a title="grid.util.myturtle.TPen.pendown
+grid.util.myturtle.pendown" class="py-name" href="#" onclick="return doclink('link-18', 'pendown', 'link-12');">pendown</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name"><a title="grid.util.myturtle.TNavigator.forward
+grid.util.myturtle.forward" class="py-name" href="#" onclick="return doclink('link-19', 'forward', 'link-13');">forward</a></tt><tt class="py-op">(</tt><tt class="py-name">sq_size</tt><tt class="py-op">)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="grid.util.myturtle.TPen.penup
+grid.util.myturtle.penup" class="py-name" href="#" onclick="return doclink('link-20', 'penup', 'link-8');">penup</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line"> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">            <tt class="py-comment"># only check bottom wall if on lowest row</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">y</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt> <tt class="py-keyword">and</tt> <tt class="py-keyword">not</tt> <tt class="py-name">testmaze</tt><tt class="py-op">.</tt><tt id="link-21" class="py-name"><a title="maze.Maze.is_permissible" class="py-name" href="#" onclick="return doclink('link-21', 'is_permissible', 'link-9');">is_permissible</a></tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-string">'down'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="grid.util.myturtle.TNavigator.goto
+grid.util.myturtle.goto" class="py-name" href="#" onclick="return doclink('link-22', 'goto', 'link-10');">goto</a></tt><tt class="py-op">(</tt><tt class="py-name">origin</tt> <tt class="py-op">+</tt> <tt class="py-name">sq_size</tt> <tt class="py-op">*</tt> <tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">origin</tt><tt class="py-op">)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name"><a title="grid.util.myturtle.TNavigator.setheading
+grid.util.myturtle.setheading" class="py-name" href="#" onclick="return doclink('link-23', 'setheading', 'link-11');">setheading</a></tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="grid.util.myturtle.TPen.pendown
+grid.util.myturtle.pendown" class="py-name" href="#" onclick="return doclink('link-24', 'pendown', 'link-12');">pendown</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-25" class="py-name"><a title="grid.util.myturtle.TNavigator.forward
+grid.util.myturtle.forward" class="py-name" href="#" onclick="return doclink('link-25', 'forward', 'link-13');">forward</a></tt><tt class="py-op">(</tt><tt class="py-name">sq_size</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-26" class="py-name"><a title="grid.util.myturtle.TPen.penup
+grid.util.myturtle.penup" class="py-name" href="#" onclick="return doclink('link-26', 'penup', 'link-8');">penup</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line"> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line">            <tt class="py-comment"># only check left wall if on leftmost column</tt> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">            <tt class="py-keyword">if</tt> <tt class="py-name">x</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt> <tt class="py-keyword">and</tt> <tt class="py-keyword">not</tt> <tt class="py-name">testmaze</tt><tt class="py-op">.</tt><tt id="link-27" class="py-name"><a title="maze.Maze.is_permissible" class="py-name" href="#" onclick="return doclink('link-27', 'is_permissible', 'link-9');">is_permissible</a></tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-name">x</tt><tt class="py-op">,</tt> <tt class="py-name">y</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-string">'left'</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="grid.util.myturtle.TNavigator.goto
+grid.util.myturtle.goto" class="py-name" href="#" onclick="return doclink('link-28', 'goto', 'link-10');">goto</a></tt><tt class="py-op">(</tt><tt class="py-name">origin</tt><tt class="py-op">,</tt> <tt class="py-name">origin</tt> <tt class="py-op">+</tt> <tt class="py-name">sq_size</tt> <tt class="py-op">*</tt> <tt class="py-name">y</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name"><a title="grid.util.myturtle.TNavigator.setheading
+grid.util.myturtle.setheading" class="py-name" href="#" onclick="return doclink('link-29', 'setheading', 'link-11');">setheading</a></tt><tt class="py-op">(</tt><tt class="py-number">90</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name"><a title="grid.util.myturtle.TPen.pendown
+grid.util.myturtle.pendown" class="py-name" href="#" onclick="return doclink('link-30', 'pendown', 'link-12');">pendown</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name"><a title="grid.util.myturtle.TNavigator.forward
+grid.util.myturtle.forward" class="py-name" href="#" onclick="return doclink('link-31', 'forward', 'link-13');">forward</a></tt><tt class="py-op">(</tt><tt class="py-name">sq_size</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">                <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name"><a title="grid.util.myturtle.TPen.penup
+grid.util.myturtle.penup" class="py-name" href="#" onclick="return doclink('link-32', 'penup', 'link-8');">penup</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line"> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line"> </tt>
+<a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">     </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line">    <tt class="py-comment"># window.exitonclick()</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line">    <tt class="py-name">wally</tt><tt class="py-op">.</tt><tt id="link-33" class="py-name" targets="Method grid.util.myturtle.RawTurtle.getscreen()=grid.util.myturtle.RawTurtle-class.html#getscreen,Function grid.util.myturtle.getscreen()=grid.util.myturtle-module.html#getscreen"><a title="grid.util.myturtle.RawTurtle.getscreen
+grid.util.myturtle.getscreen" class="py-name" href="#" onclick="return doclink('link-33', 'getscreen', 'link-33');">getscreen</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-34" class="py-name" targets="Variable grid.util.myturtle._Screen._root=grid.util.myturtle._Screen-class.html#_root"><a title="grid.util.myturtle._Screen._root" class="py-name" href="#" onclick="return doclink('link-34', '_root', 'link-34');">_root</a></tt><tt class="py-op">.</tt><tt class="py-name">mainloop</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Nov  2 22:10:02 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

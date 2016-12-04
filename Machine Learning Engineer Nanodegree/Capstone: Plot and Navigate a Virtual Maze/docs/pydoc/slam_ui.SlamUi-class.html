@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>slam_ui.SlamUi</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="slam_ui-module.html">Module&nbsp;slam_ui</a> ::
+        Class&nbsp;SlamUi
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="slam_ui.SlamUi-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class SlamUi</h1><p class="nomargin-top"><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+<a href="object-class.html">object</a> --+
+         |
+        <strong class="uidshort">SlamUi</strong>
+</pre>
+
+<hr />
+<p>Does all the hard work of bringing boring AI algorithms to life and 
+  make them look good. Implemented using python turtle library.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="slam_ui.SlamUi-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">maze_dim</span>)</span><br />
+      Initialize UI</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="slam_ui.SlamUi-class.html#writeLine" class="summary-sig-name">writeLine</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Write a line of text on UI.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.writeLine">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="slam_ui.SlamUi-class.html#drawPatch" class="summary-sig-name">drawPatch</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">color</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">#E5E4E2</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">key_prefix</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      Patch is a gray square that signifies unexplored cell.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.drawPatch">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="slam_ui.SlamUi-class.html#drawDot" class="summary-sig-name">drawDot</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>)</span><br />
+      Draws red dots at the intersection of grid lines</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.drawDot">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="slam_ui.SlamUi-class.html#drawWall" class="summary-sig-name">drawWall</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>,
+        <span class="summary-sig-arg">direction</span>,
+        <span class="summary-sig-arg">color</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">black</code><code class="variable-quote">'</code></span>)</span><br />
+      Draw wall of a cell in the given direction</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.drawWall">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="slam_ui.SlamUi-class.html#cellExplored" class="summary-sig-name">cellExplored</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">x</span>,
+        <span class="summary-sig-arg">y</span>)</span><br />
+      Mark cell as explored by turning bgcolor from gray to white</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.cellExplored">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="wait"></a><span class="summary-sig-name">wait</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Wait for user input, such as, close the UI window</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.wait">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="slam_ui.SlamUi-class.html#getEraseableTurtle" class="summary-sig-name">getEraseableTurtle</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">key</span>,
+        <span class="summary-sig-arg">color</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">black</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">pensize</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">hideTurtle</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Create or return an eraseable Turtle with given properties</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.getEraseableTurtle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="eraseCurrentPath"></a><span class="summary-sig-name">eraseCurrentPath</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Erase current Path (gray line)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.eraseCurrentPath">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="slam_ui.SlamUi-class.html#drawCurrentPath" class="summary-sig-name">drawCurrentPath</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Draw current path (gray line)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.drawCurrentPath">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="slam_ui.SlamUi-class.html#drawPath" class="summary-sig-name">drawPath</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">command</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Draw first, best or recent path</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.drawPath">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="slam_ui.SlamUi-class.html#doBlockDeadend" class="summary-sig-name">doBlockDeadend</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Execute block deadend cell command.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.doBlockDeadend">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="slam_ui.SlamUi-class.html#doCellExplored" class="summary-sig-name">doCellExplored</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Execute cell explored ui command.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.doCellExplored">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="slam_ui.SlamUi-class.html#doDepthsChanged" class="summary-sig-name">doDepthsChanged</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Execute depths changed ui command.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.doDepthsChanged">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="slam_ui.SlamUi-class.html#doQLearningChanged" class="summary-sig-name">doQLearningChanged</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Execute QLearning values changed ui command.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.doQLearningChanged">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="slam_ui.SlamUi-class.html#doValueIterationChanged" class="summary-sig-name">doValueIterationChanged</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Execute Values changed ui command.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.doValueIterationChanged">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="slam_ui.SlamUi-class.html#doDrawPath" class="summary-sig-name">doDrawPath</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Execute draw path (best, first recent) ui command.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.doDrawPath">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="object-class.html">object</a></code></b>:
+      <code><a href="object-class.html#__delattr__">__delattr__</a></code>,
+      <code><a href="object-class.html#__format__">__format__</a></code>,
+      <code><a href="object-class.html#__getattribute__">__getattribute__</a></code>,
+      <code><a href="object-class.html#__hash__">__hash__</a></code>,
+      <code><a href="object-class.html#__new__">__new__</a></code>,
+      <code><a href="object-class.html#__reduce__">__reduce__</a></code>,
+      <code><a href="object-class.html#__reduce_ex__">__reduce_ex__</a></code>,
+      <code><a href="object-class.html#__repr__">__repr__</a></code>,
+      <code><a href="object-class.html#__setattr__">__setattr__</a></code>,
+      <code><a href="object-class.html#__sizeof__">__sizeof__</a></code>,
+      <code><a href="object-class.html#__str__">__str__</a></code>,
+      <code><a href="object-class.html#__subclasshook__">__subclasshook__</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="object-class.html">object</a></code></b>:
+      <code><a href="object-class.html#__class__">__class__</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">maze_dim</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialize UI</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>maze_dim</code></strong> (int) - dimension of the maze. Usually 12x12 or 16x16</li>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="writeLine"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">writeLine</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.writeLine">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Write a line of text on UI. Used to write status or title</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>args</code></strong> (dict) - dict of parameters. command=title|status|footer. line=txt</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="drawPatch"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">drawPatch</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">x</span>,
+        <span class="sig-arg">y</span>,
+        <span class="sig-arg">color</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">#E5E4E2</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">key_prefix</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.drawPatch">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Patch is a gray square that signifies unexplored cell. When a cell is 
+  visited, we remove this patch and cell becomes white.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> (int) - x coord of cell</li>
+        <li><strong class="pname"><code>y</code></strong> (int) - y coord of cell</li>
+        <li><strong class="pname"><code>color</code></strong> (Hex color code) - color of patch. Default is a gray color</li>
+        <li><strong class="pname"><code>key_prefix</code></strong> (string) - prefix used to uniquely identify eraseable turtle to draw this 
+          patch</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="drawDot"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">drawDot</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">x</span>,
+        <span class="sig-arg">y</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.drawDot">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Draws red dots at the intersection of grid lines</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> (int) - x coord of cell</li>
+        <li><strong class="pname"><code>y</code></strong> (int) - y coord of cell</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="drawWall"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">drawWall</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">x</span>,
+        <span class="sig-arg">y</span>,
+        <span class="sig-arg">direction</span>,
+        <span class="sig-arg">color</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">black</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.drawWall">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Draw wall of a cell in the given direction</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> (int) - x coord of cell</li>
+        <li><strong class="pname"><code>y</code></strong> (int) - y coord of cell</li>
+        <li><strong class="pname"><code>direction</code></strong> (grid.model.maze_model.MazeModel) - Up, Right, Left, Down</li>
+        <li><strong class="pname"><code>color</code></strong> (Hex color code) - color of the wall. Default is black</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="cellExplored"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">cellExplored</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">x</span>,
+        <span class="sig-arg">y</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.cellExplored">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Mark cell as explored by turning bgcolor from gray to white</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>x</code></strong> (int) - x coord of cell</li>
+        <li><strong class="pname"><code>y</code></strong> (int) - y coord of cell</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getEraseableTurtle"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getEraseableTurtle</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">key</span>,
+        <span class="sig-arg">color</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">black</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">pensize</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">hideTurtle</span>=<span class="sig-default">True</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.getEraseableTurtle">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Create or return an eraseable Turtle with given properties</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>key</code></strong> (string) - key to lookup eraseable turtle</li>
+        <li><strong class="pname"><code>color</code></strong> (string) - hex color code</li>
+        <li><strong class="pname"><code>pensize</code></strong> (int) - size of the turtle pen</li>
+        <li><strong class="pname"><code>hideTurtle</code></strong> (boolean) - whether to hide turtle</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="drawCurrentPath"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">drawCurrentPath</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.drawCurrentPath">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Draw current path (gray line)</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>args</code></strong> (dict) - dict of parameters to be used to draw current path</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="drawPath"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">drawPath</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">command</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.drawPath">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Draw first, best or recent path</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>command</code></strong> (string) - command = first|best|recent</li>
+        <li><strong class="pname"><code>args</code></strong> (dict) - dict of parameters to be used</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="doBlockDeadend"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">doBlockDeadend</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.doBlockDeadend">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Execute block deadend cell command. Close the cell with red line and 
+  change background color to red.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>args</code></strong> (dict) - dict of parameters to be used</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="doCellExplored"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">doCellExplored</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.doCellExplored">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Execute cell explored ui command. Change cell's background from gray 
+  to white</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>args</code></strong> (dict) - dict of parameters to be used</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="doDepthsChanged"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">doDepthsChanged</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.doDepthsChanged">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Execute depths changed ui command. Write new depth numbers in each 
+  cell.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>args</code></strong> (dict) - dict of parameters to be used</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="doQLearningChanged"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">doQLearningChanged</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.doQLearningChanged">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Execute QLearning values changed ui command. Draw policy arrows in 
+  each cell</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>args</code></strong> (dict) - dict of parameters to be used</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="doValueIterationChanged"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">doValueIterationChanged</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.doValueIterationChanged">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Execute Values changed ui command. Update value iteration values in 
+  each cell.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>args</code></strong> (dict) - dict of parameters to be used</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="doDrawPath"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">doDrawPath</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="slam_ui-pysrc.html#SlamUi.doDrawPath">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Execute draw path (best, first recent) ui command.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>args</code></strong> (dict) - dict of parameters to be used</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Nov  2 22:10:02 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,2326 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>grid.util.myturtle.RawTurtle</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="grid-module.html">Package&nbsp;grid</a> ::
+        <a href="grid.util-module.html">Package&nbsp;util</a> ::
+        <a href="grid.util.myturtle-module.html">Module&nbsp;myturtle</a> ::
+        Class&nbsp;RawTurtle
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="grid.util.myturtle.RawTurtle-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class RawTurtle</h1><p class="nomargin-top"><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+<a href="object-class.html">object</a> --+    
+         |    
+      <a href="grid.util.myturtle.TPen-class.html" onclick="show_private();">TPen</a> --+
+             |
+<a href="object-class.html">object</a> --+   |
+         |   |
+<a href="grid.util.myturtle.TNavigator-class.html" onclick="show_private();">TNavigator</a> --+
+             |
+            <strong class="uidshort">RawTurtle</strong>
+</pre>
+
+<dl><dt>Known Subclasses:</dt>
+<dd>
+      <ul class="subclass-list">
+<li><a href="grid.util.myturtle.Turtle-class.html">Turtle</a></li>  </ul>
+</dd></dl>
+
+<hr />
+<p>Animation part of the RawTurtle. Puts RawTurtle upon a TurtleScreen 
+  and provides tools for its animation.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">canvas</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">shape</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">classic</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">undobuffersize</span>=<span class="summary-sig-default">1000</span>,
+        <span class="summary-sig-arg">visible</span>=<span class="summary-sig-default">True</span>)</span><br />
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#reset" class="summary-sig-name">reset</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Delete the turtle's drawings and restore its default values.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.reset">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#setundobuffer" class="summary-sig-name">setundobuffer</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">size</span>)</span><br />
+      Set or disable undobuffer.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.setundobuffer">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#undobufferentries" class="summary-sig-name">undobufferentries</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return count of entries in the undobuffer.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.undobufferentries">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_clear"></a><span class="summary-sig-name">_clear</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Delete all of pen's drawings</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._clear">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#clear" class="summary-sig-name">clear</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Delete the turtle's drawings from the screen.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.clear">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_update_data"></a><span class="summary-sig-name">_update_data</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._update_data">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#_update" class="summary-sig-name" onclick="show_private();">_update</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Perform a Turtle-data update.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._update">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#tracer" class="summary-sig-name">tracer</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">flag</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">delay</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Turns turtle animation on/off and set delay for update drawings.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.tracer">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#_color" class="summary-sig-name" onclick="show_private();">_color</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      dummy method - to be overwritten by child class</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._color">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#_colorstr" class="summary-sig-name" onclick="show_private();">_colorstr</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      dummy method - to be overwritten by child class</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._colorstr">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_cc"></a><span class="summary-sig-name">_cc</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">args</span>)</span><br />
+      Convert colortriples to hexstrings.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._cc">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#clone" class="summary-sig-name">clone</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Create and return a clone of the turtle.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.clone">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#shape" class="summary-sig-name">shape</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Set turtle shape to shape with given name / return current shapename.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.shape">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#shapesize" class="summary-sig-name">shapesize</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">stretch_wid</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">stretch_len</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">outline</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Set/return turtle's stretchfactors/outline.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.shapesize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#settiltangle" class="summary-sig-name">settiltangle</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">angle</span>)</span><br />
+      Rotate the turtleshape to point in the specified direction</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.settiltangle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#tiltangle" class="summary-sig-name">tiltangle</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return the current tilt-angle.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.tiltangle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#tilt" class="summary-sig-name">tilt</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">angle</span>)</span><br />
+      Rotate the turtleshape by angle.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.tilt">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_polytrafo"></a><span class="summary-sig-name">_polytrafo</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">poly</span>)</span><br />
+      Computes transformed polygon shapes from a shape according to current
+      position and heading.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._polytrafo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_drawturtle"></a><span class="summary-sig-name">_drawturtle</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Manages the correct rendering of the turtle with respect to its 
+      shape, resizemode, stretch and tilt etc.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._drawturtle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#stamp" class="summary-sig-name">stamp</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Stamp a copy of the turtleshape onto the canvas and return its id.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.stamp">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_clearstamp"></a><span class="summary-sig-name">_clearstamp</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">stampid</span>)</span><br />
+      does the work for clearstamp() and clearstamps()</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._clearstamp">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#clearstamp" class="summary-sig-name">clearstamp</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">stampid</span>)</span><br />
+      Delete stamp with given stampid</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.clearstamp">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#clearstamps" class="summary-sig-name">clearstamps</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">n</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Delete all or first/last n of turtle's stamps.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.clearstamps">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#_goto" class="summary-sig-name" onclick="show_private();">_goto</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">end</span>)</span><br />
+      Move the pen to the point end, thereby drawing a line if pen is down.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._goto">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#_undogoto" class="summary-sig-name" onclick="show_private();">_undogoto</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">entry</span>)</span><br />
+      Reverse a _goto.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._undogoto">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#_rotate" class="summary-sig-name" onclick="show_private();">_rotate</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">angle</span>)</span><br />
+      Turns pen clockwise by angle.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._rotate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#_newLine" class="summary-sig-name" onclick="show_private();">_newLine</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">usePos</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Closes current line item and starts a new one.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._newLine">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#fill" class="summary-sig-name">fill</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">flag</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Call fill(True) before drawing a shape to fill, fill(False) when 
+      done.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.fill">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#begin_fill" class="summary-sig-name">begin_fill</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Called just before drawing a shape to be filled.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.begin_fill">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#end_fill" class="summary-sig-name">end_fill</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Fill the shape drawn after the call begin_fill().</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.end_fill">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#dot" class="summary-sig-name">dot</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">size</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">*color</span>)</span><br />
+      Draw a dot with diameter size, using color.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.dot">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_write"></a><span class="summary-sig-name">_write</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">txt</span>,
+        <span class="summary-sig-arg">align</span>,
+        <span class="summary-sig-arg">font</span>)</span><br />
+      Performs the writing for write()</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._write">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#write" class="summary-sig-name">write</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">arg</span>,
+        <span class="summary-sig-arg">move</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">align</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">left</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">font</span>=<span class="summary-sig-default"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">Arial</code><code class="variable-quote">'</code><code class="variable-op">, </code>8<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">normal</code><code class="variable-quote">'</code><code class="variable-group">)</code></span>)</span><br />
+      Write text at the current turtle position.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.write">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#begin_poly" class="summary-sig-name">begin_poly</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Start recording the vertices of a polygon.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.begin_poly">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#end_poly" class="summary-sig-name">end_poly</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Stop recording the vertices of a polygon.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.end_poly">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#get_poly" class="summary-sig-name">get_poly</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return the lastly recorded polygon.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.get_poly">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#getscreen" class="summary-sig-name">getscreen</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return the TurtleScreen object, the turtle is drawing  on.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.getscreen">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#getturtle" class="summary-sig-name">getturtle</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return the Turtleobject itself.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.getturtle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#getpen" class="summary-sig-name">getpen</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return the Turtleobject itself.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.getturtle">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#window_width" class="summary-sig-name">window_width</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the width of the turtle window.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.window_width">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#window_height" class="summary-sig-name">window_height</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return the height of the turtle window.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.window_height">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#_delay" class="summary-sig-name" onclick="show_private();">_delay</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">delay</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Set delay value which determines speed of turtle animation.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._delay">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#onclick" class="summary-sig-name">onclick</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fun</span>,
+        <span class="summary-sig-arg">btn</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">add</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Bind fun to mouse-click event on this turtle on canvas.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.onclick">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#onrelease" class="summary-sig-name">onrelease</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fun</span>,
+        <span class="summary-sig-arg">btn</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">add</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Bind fun to mouse-button-release event on this turtle on canvas.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.onrelease">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#ondrag" class="summary-sig-name">ondrag</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">fun</span>,
+        <span class="summary-sig-arg">btn</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">add</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Bind fun to mouse-move event on this turtle on canvas.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.ondrag">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_undo"></a><span class="summary-sig-name">_undo</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">action</span>,
+        <span class="summary-sig-arg">data</span>)</span><br />
+      Does the main part of the work for undo()</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._undo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#undo" class="summary-sig-name">undo</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      undo (repeatedly) the last turtle action.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.undo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.util.myturtle.RawTurtle-class.html#turtlesize" class="summary-sig-name">turtlesize</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">stretch_wid</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">stretch_len</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">outline</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Set/return turtle's stretchfactors/outline.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.shapesize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="grid.util.myturtle.TPen-class.html" onclick="show_private();">TPen</a></code></b>:
+      <code><a href="grid.util.myturtle.TPen-class.html#color">color</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#down">down</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#fillcolor">fillcolor</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#hideturtle">hideturtle</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#ht">ht</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#isdown">isdown</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#isvisible">isvisible</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#pd">pd</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#pen">pen</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#pencolor">pencolor</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#pendown">pendown</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#pensize">pensize</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#penup">penup</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#pu">pu</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#resizemode">resizemode</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#showturtle">showturtle</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#speed">speed</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#st">st</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#up">up</a></code>,
+      <code><a href="grid.util.myturtle.TPen-class.html#width">width</a></code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="grid.util.myturtle.TPen-class.html" onclick="show_private();">TPen</a></code></b> (private):
+      <code><a href="grid.util.myturtle.TPen-class.html#_reset" onclick="show_private();">_reset</a></code>
+      </p></div>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="grid.util.myturtle.TNavigator-class.html" onclick="show_private();">TNavigator</a></code></b>:
+      <code><a href="grid.util.myturtle.TNavigator-class.html#back">back</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#backward">backward</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#bk">bk</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#circle">circle</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#degrees">degrees</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#distance">distance</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#fd">fd</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#forward">forward</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#goto">goto</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#heading">heading</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#home">home</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#left">left</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#lt">lt</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#pos">pos</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#position">position</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#radians">radians</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#right">right</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#rt">rt</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#seth">seth</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#setheading">setheading</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#setpos">setpos</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#setposition">setposition</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#setx">setx</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#sety">sety</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#towards">towards</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#xcor">xcor</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#ycor">ycor</a></code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="grid.util.myturtle.TNavigator-class.html" onclick="show_private();">TNavigator</a></code></b> (private):
+      <code><a href="grid.util.myturtle.TNavigator-class.html#_go" onclick="show_private();">_go</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#_setDegreesPerAU" onclick="show_private();">_setDegreesPerAU</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#_setmode" onclick="show_private();">_setmode</a></code>
+      </p></div>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="object-class.html">object</a></code></b>:
+      <code><a href="object-class.html#__delattr__">__delattr__</a></code>,
+      <code><a href="object-class.html#__format__">__format__</a></code>,
+      <code><a href="object-class.html#__getattribute__">__getattribute__</a></code>,
+      <code><a href="object-class.html#__hash__">__hash__</a></code>,
+      <code><a href="object-class.html#__new__">__new__</a></code>,
+      <code><a href="object-class.html#__reduce__">__reduce__</a></code>,
+      <code><a href="object-class.html#__reduce_ex__">__reduce_ex__</a></code>,
+      <code><a href="object-class.html#__repr__">__repr__</a></code>,
+      <code><a href="object-class.html#__setattr__">__setattr__</a></code>,
+      <code><a href="object-class.html#__sizeof__">__sizeof__</a></code>,
+      <code><a href="object-class.html#__str__">__str__</a></code>,
+      <code><a href="object-class.html#__subclasshook__">__subclasshook__</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="screens"></a><span class="summary-name">screens</span> = <code title="[]"><code class="variable-group">[</code><code class="variable-group">]</code></code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="grid.util.myturtle.TNavigator-class.html" onclick="show_private();">TNavigator</a></code></b>:
+      <code><a href="grid.util.myturtle.TNavigator-class.html#DEFAULT_ANGLEOFFSET">DEFAULT_ANGLEOFFSET</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#DEFAULT_ANGLEORIENT">DEFAULT_ANGLEORIENT</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#DEFAULT_MODE">DEFAULT_MODE</a></code>,
+      <code><a href="grid.util.myturtle.TNavigator-class.html#START_ORIENTATION">START_ORIENTATION</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="object-class.html">object</a></code></b>:
+      <code><a href="object-class.html#__class__">__class__</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">canvas</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">shape</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">classic</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">undobuffersize</span>=<span class="sig-default">1000</span>,
+        <span class="sig-arg">visible</span>=<span class="sig-default">True</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="reset"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">reset</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.reset">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Delete the turtle's drawings and restore its default values.
+
+        No argument.
+,
+        Delete the turtle's drawings from the screen, re-center the turtle
+        and set variables to the default values.
+
+        Example (for a Turtle instance named turtle):
+        &gt;&gt;&gt; turtle.position()
+        (0.00,-22.00)
+        &gt;&gt;&gt; turtle.heading()
+        100.0
+        &gt;&gt;&gt; turtle.reset()
+        &gt;&gt;&gt; turtle.position()
+        (0.00,0.00)
+        &gt;&gt;&gt; turtle.heading()
+        0.0
+        
+
+</pre>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="grid.util.myturtle.TNavigator-class.html#reset">TNavigator.reset</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setundobuffer"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setundobuffer</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">size</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.setundobuffer">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set or disable undobuffer.</p>
+  <p>Argument: size -- an integer or None</p>
+  <p>If size is an integer an empty undobuffer of given size is installed. 
+  Size gives the maximum number of turtle-actions that can be undone by the
+  undo() function. If size is None, no undobuffer is present.</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.setundobuffer(42)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="undobufferentries"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">undobufferentries</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.undobufferentries">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return count of entries in the undobuffer.</p>
+  <p>No argument.</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; while 
+  undobufferentries(): ...     undo()</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="clear"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">clear</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.clear">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Delete the turtle's drawings from the screen. Do not move turtle.</p>
+  <p>No arguments.</p>
+  <p>Delete the turtle's drawings from the screen. Do not move turtle. 
+  State and position of the turtle as well as drawings of other turtles are
+  not affected.</p>
+  <p>Examples (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.clear()</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_update"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_update</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._update">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Perform a Turtle-data update.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="grid.util.myturtle.TPen-class.html#_update" onclick="show_private();">TPen._update</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="tracer"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">tracer</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">flag</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">delay</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.tracer">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Turns turtle animation on/off and set delay for update drawings.</p>
+  <p>Optional arguments: n -- nonnegative  integer delay -- nonnegative  
+  integer</p>
+  <p>If n is given, only each n-th regular screen update is really 
+  performed. (Can be used to accelerate the drawing of complex graphics.) 
+  Second arguments sets delay value (see RawTurtle.delay())</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.tracer(8, 25) &gt;&gt;&gt; dist = 2 &gt;&gt;&gt; for i in 
+  range(200): ...     turtle.fd(dist) ...     turtle.rt(90) ...     dist +=
+  2</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="grid.util.myturtle.TNavigator-class.html#tracer">TNavigator.tracer</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_color"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_color</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._color">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>dummy method - to be overwritten by child class</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="grid.util.myturtle.TPen-class.html#_color" onclick="show_private();">TPen._color</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_colorstr"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_colorstr</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">args</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._colorstr">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>dummy method - to be overwritten by child class</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="grid.util.myturtle.TPen-class.html#_colorstr" onclick="show_private();">TPen._colorstr</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="clone"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">clone</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.clone">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Create and return a clone of the turtle.</p>
+  <p>No argument.</p>
+  <p>Create and return a clone of the turtle with same position, heading 
+  and turtle properties.</p>
+  <p>Example (for a Turtle instance named mick): mick = Turtle() joe = 
+  mick.clone()</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="shape"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">shape</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.shape">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set turtle shape to shape with given name / return current 
+  shapename.</p>
+  <p>Optional argument: name -- a string, which is a valid shapename</p>
+  <p>Set turtle shape to shape with given name or, if name is not given, 
+  return name of current shape. Shape with name must exist in the 
+  TurtleScreen's shape dictionary. Initially there are the following 
+  polygon shapes: 'arrow', 'turtle', 'circle', 'square', 'triangle', 
+  'classic'. To learn about how to deal with shapes see Screen-method 
+  register_shape.</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.shape() 'arrow' &gt;&gt;&gt; turtle.shape(&quot;turtle&quot;) 
+  &gt;&gt;&gt; turtle.shape() 'turtle'</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="shapesize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">shapesize</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">stretch_wid</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">stretch_len</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">outline</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.shapesize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Set/return turtle's stretchfactors/outline. Set resizemode to &quot;user&quot;.
+
+Optional arguments:
+   stretch_wid : positive number
+   stretch_len : positive number
+   outline  : positive number
+
+Return or set the pen's attributes x/y-stretchfactors and/or outline.
+Set resizemode to &quot;user&quot;.
+If and only if resizemode is set to &quot;user&quot;, the turtle will be displayed
+stretched according to its stretchfactors:
+stretch_wid is stretchfactor perpendicular to orientation
+stretch_len is stretchfactor in direction of turtles orientation.
+outline determines the width of the shapes's outline.
+
+Examples (for a Turtle instance named turtle):
+&gt;&gt;&gt; turtle.resizemode(&quot;user&quot;)
+&gt;&gt;&gt; turtle.shapesize(5, 5, 12)
+&gt;&gt;&gt; turtle.shapesize(outline=8)
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="settiltangle"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">settiltangle</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">angle</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.settiltangle">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Rotate the turtleshape to point in the specified direction</p>
+  <p>Optional argument: angle -- number</p>
+  <p>Rotate the turtleshape to point in the direction specified by angle, 
+  regardless of its current tilt-angle. DO NOT change the turtle's heading 
+  (direction of movement).</p>
+  <p>Examples (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.shape(&quot;circle&quot;) &gt;&gt;&gt; turtle.shapesize(5,2) 
+  &gt;&gt;&gt; turtle.settiltangle(45) &gt;&gt;&gt; stamp() &gt;&gt;&gt; 
+  turtle.fd(50) &gt;&gt;&gt; turtle.settiltangle(-45) &gt;&gt;&gt; stamp() 
+  &gt;&gt;&gt; turtle.fd(50)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="tiltangle"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">tiltangle</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.tiltangle">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the current tilt-angle.</p>
+  <p>No argument.</p>
+  <p>Return the current tilt-angle, i. e. the angle between the orientation
+  of the turtleshape and the heading of the turtle (its direction of 
+  movement).</p>
+  <p>Examples (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.shape(&quot;circle&quot;) &gt;&gt;&gt; turtle.shapesize(5,2) 
+  &gt;&gt;&gt; turtle.tilt(45) &gt;&gt;&gt; turtle.tiltangle()</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="tilt"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">tilt</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">angle</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.tilt">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Rotate the turtleshape by angle.</p>
+  <p>Argument: angle - a number</p>
+  <p>Rotate the turtleshape by angle from its current tilt-angle, but do 
+  NOT change the turtle's heading (direction of movement).</p>
+  <p>Examples (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.shape(&quot;circle&quot;) &gt;&gt;&gt; turtle.shapesize(5,2) 
+  &gt;&gt;&gt; turtle.tilt(30) &gt;&gt;&gt; turtle.fd(50) &gt;&gt;&gt; 
+  turtle.tilt(30) &gt;&gt;&gt; turtle.fd(50)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="stamp"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">stamp</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.stamp">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Stamp a copy of the turtleshape onto the canvas and return its id.</p>
+  <p>No argument.</p>
+  <p>Stamp a copy of the turtle shape onto the canvas at the current turtle
+  position. Return a stamp_id for that stamp, which can be used to delete 
+  it by calling clearstamp(stamp_id).</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.color(&quot;blue&quot;) &gt;&gt;&gt; turtle.stamp() 13 
+  &gt;&gt;&gt; turtle.fd(50)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="clearstamp"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">clearstamp</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">stampid</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.clearstamp">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Delete stamp with given stampid</p>
+  <p>Argument: stampid - an integer, must be return value of previous 
+  stamp() call.</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.color(&quot;blue&quot;) &gt;&gt;&gt; astamp = turtle.stamp() 
+  &gt;&gt;&gt; turtle.fd(50) &gt;&gt;&gt; turtle.clearstamp(astamp)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="clearstamps"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">clearstamps</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">n</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.clearstamps">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Delete all or first/last n of turtle's stamps.</p>
+  <p>Optional argument: n -- an integer</p>
+  <p>If n is None, delete all of pen's stamps, else if n &gt; 0 delete 
+  first n stamps else if n &lt; 0 delete last n stamps.</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; for i in 
+  range(8): ...     turtle.stamp(); turtle.fd(30) ... &gt;&gt;&gt; 
+  turtle.clearstamps(2) &gt;&gt;&gt; turtle.clearstamps(-2) &gt;&gt;&gt; 
+  turtle.clearstamps()</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_goto"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_goto</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">end</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._goto">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Move the pen to the point end, thereby drawing a line if pen is down. 
+  All other methods for turtle movement depend on this one.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="grid.util.myturtle.TNavigator-class.html#_goto" onclick="show_private();">TNavigator._goto</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_undogoto"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_undogoto</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">entry</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._undogoto">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Reverse a _goto. Used for undo()</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_rotate"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_rotate</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">angle</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._rotate">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Turns pen clockwise by angle.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="grid.util.myturtle.TNavigator-class.html#_rotate" onclick="show_private();">TNavigator._rotate</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="_newLine"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_newLine</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">usePos</span>=<span class="sig-default">True</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._newLine">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Closes current line item and starts a new one. Remark: if current line
+  became too long, animation performance (via _drawline) slowed down 
+  considerably.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="grid.util.myturtle.TPen-class.html#_newLine" onclick="show_private();">TPen._newLine</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="fill"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">fill</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">flag</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.fill">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Call fill(True) before drawing a shape to fill, fill(False) when 
+  done.</p>
+  <p>Optional argument: flag -- True/False (or 1/0 respectively)</p>
+  <p>Call fill(True) before drawing the shape you want to fill, and  
+  fill(False) when done. When used without argument: return fillstate (True
+  if filling, False else)</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.fill(True) &gt;&gt;&gt; turtle.forward(100) &gt;&gt;&gt; 
+  turtle.left(90) &gt;&gt;&gt; turtle.forward(100) &gt;&gt;&gt; 
+  turtle.left(90) &gt;&gt;&gt; turtle.forward(100) &gt;&gt;&gt; 
+  turtle.left(90) &gt;&gt;&gt; turtle.forward(100) &gt;&gt;&gt; 
+  turtle.fill(False)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="begin_fill"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">begin_fill</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.begin_fill">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Called just before drawing a shape to be filled.</p>
+  <p>No argument.</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.begin_fill() &gt;&gt;&gt; turtle.forward(100) &gt;&gt;&gt; 
+  turtle.left(90) &gt;&gt;&gt; turtle.forward(100) &gt;&gt;&gt; 
+  turtle.left(90) &gt;&gt;&gt; turtle.forward(100) &gt;&gt;&gt; 
+  turtle.left(90) &gt;&gt;&gt; turtle.forward(100) &gt;&gt;&gt; 
+  turtle.end_fill()</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="end_fill"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">end_fill</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.end_fill">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Fill the shape drawn after the call begin_fill().</p>
+  <p>No argument.</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.begin_fill() &gt;&gt;&gt; turtle.forward(100) &gt;&gt;&gt; 
+  turtle.left(90) &gt;&gt;&gt; turtle.forward(100) &gt;&gt;&gt; 
+  turtle.left(90) &gt;&gt;&gt; turtle.forward(100) &gt;&gt;&gt; 
+  turtle.left(90) &gt;&gt;&gt; turtle.forward(100) &gt;&gt;&gt; 
+  turtle.end_fill()</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="dot"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dot</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">size</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">*color</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.dot">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Draw a dot with diameter size, using color.</p>
+  <p>Optional arguments: size -- an integer &gt;= 1 (if given) color -- a 
+  colorstring or a numeric color tuple</p>
+  <p>Draw a circular dot with diameter size, using color. If size is not 
+  given, the maximum of pensize+4 and 2*pensize is used.</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.dot() &gt;&gt;&gt; turtle.fd(50); turtle.dot(20, 
+  &quot;blue&quot;); turtle.fd(50)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="write"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">write</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">arg</span>,
+        <span class="sig-arg">move</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">align</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">left</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">font</span>=<span class="sig-default"><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">Arial</code><code class="variable-quote">'</code><code class="variable-op">, </code>8<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">normal</code><code class="variable-quote">'</code><code class="variable-group">)</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.write">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Write text at the current turtle position.</p>
+  <p>Arguments: arg -- info, which is to be written to the TurtleScreen 
+  move (optional) -- True/False align (optional) -- one of the strings 
+  &quot;left&quot;, &quot;center&quot; or right&quot; font (optional) -- a 
+  triple (fontname, fontsize, fonttype)</p>
+  <p>Write text - the string representation of arg - at the current turtle 
+  position according to align (&quot;left&quot;, &quot;center&quot; or 
+  right&quot;) and with the given font. If move is True, the pen is moved 
+  to the bottom-right corner of the text. By default, move is False.</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.write('Home = ', True, align=&quot;center&quot;) &gt;&gt;&gt; 
+  turtle.write((0,0), True)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="begin_poly"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">begin_poly</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.begin_poly">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Start recording the vertices of a polygon.</p>
+  <p>No argument.</p>
+  <p>Start recording the vertices of a polygon. Current turtle position is 
+  first point of polygon.</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.begin_poly()</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="end_poly"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">end_poly</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.end_poly">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Stop recording the vertices of a polygon.</p>
+  <p>No argument.</p>
+  <p>Stop recording the vertices of a polygon. Current turtle position is 
+  last point of polygon. This will be connected with the first point.</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; 
+  turtle.end_poly()</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_poly"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_poly</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.get_poly">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the lastly recorded polygon.</p>
+  <p>No argument.</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; p = 
+  turtle.get_poly() &gt;&gt;&gt; 
+  turtle.register_shape(&quot;myFavouriteShape&quot;, p)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="getscreen"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getscreen</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.getscreen">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the TurtleScreen object, the turtle is drawing  on.</p>
+  <p>No argument.</p>
+  <p>Return the TurtleScreen object, the turtle is drawing  on. So 
+  TurtleScreen-methods can be called for that object.</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; ts = 
+  turtle.getscreen() &gt;&gt;&gt; ts &lt;turtle.TurtleScreen object at 
+  0x0106B770&gt; &gt;&gt;&gt; ts.bgcolor(&quot;pink&quot;)</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="getturtle"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getturtle</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.getturtle">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the Turtleobject itself.</p>
+  <p>No argument.</p>
+  <p>Only reasonable use: as a function to return the 'anonymous 
+  turtle':</p>
+  <p>Example: &gt;&gt;&gt; pet = getturtle() &gt;&gt;&gt; pet.fd(50) 
+  &gt;&gt;&gt; pet &lt;turtle.Turtle object at 0x0187D810&gt; &gt;&gt;&gt; 
+  turtles() [&lt;turtle.Turtle object at 0x0187D810&gt;]</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="getpen"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getpen</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.getturtle">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the Turtleobject itself.</p>
+  <p>No argument.</p>
+  <p>Only reasonable use: as a function to return the 'anonymous 
+  turtle':</p>
+  <p>Example: &gt;&gt;&gt; pet = getturtle() &gt;&gt;&gt; pet.fd(50) 
+  &gt;&gt;&gt; pet &lt;turtle.Turtle object at 0x0187D810&gt; &gt;&gt;&gt; 
+  turtles() [&lt;turtle.Turtle object at 0x0187D810&gt;]</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="window_width"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">window_width</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.window_width">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the width of the turtle window.</p>
+  <p>No argument.</p>
+  <p>Example (for a TurtleScreen instance named screen): &gt;&gt;&gt; 
+  screen.window_width() 640</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="window_height"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">window_height</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.window_height">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the height of the turtle window.</p>
+  <p>No argument.</p>
+  <p>Example (for a TurtleScreen instance named screen): &gt;&gt;&gt; 
+  screen.window_height() 480</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="_delay"></a>
+<div class="private">
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">_delay</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">delay</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle._delay">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set delay value which determines speed of turtle animation.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="grid.util.myturtle.TNavigator-class.html#_delay" onclick="show_private();">TNavigator._delay</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="onclick"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onclick</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fun</span>,
+        <span class="sig-arg">btn</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">add</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.onclick">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Bind fun to mouse-click event on this turtle on canvas.
+
+Arguments:
+fun --  a function with two arguments, to which will be assigned
+        the coordinates of the clicked point on the canvas.
+num --  number of the mouse-button defaults to 1 (left mouse button).
+add --  True or False. If True, new binding will be added, otherwise
+        it will replace a former binding.
+
+Example for the anonymous turtle, i. e. the procedural way:
+
+&gt;&gt;&gt; def turn(x, y):
+...     left(360)
+...
+&gt;&gt;&gt; onclick(turn)  # Now clicking into the turtle will turn it.
+&gt;&gt;&gt; onclick(None)  # event-binding will be removed
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="onrelease"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">onrelease</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fun</span>,
+        <span class="sig-arg">btn</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">add</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.onrelease">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Bind fun to mouse-button-release event on this turtle on canvas.
+
+Arguments:
+fun -- a function with two arguments, to which will be assigned
+        the coordinates of the clicked point on the canvas.
+num --  number of the mouse-button defaults to 1 (left mouse button).
+
+Example (for a MyTurtle instance named joe):
+&gt;&gt;&gt; class MyTurtle(Turtle):
+...     def glow(self,x,y):
+...             self.fillcolor(&quot;red&quot;)
+...     def unglow(self,x,y):
+...             self.fillcolor(&quot;&quot;)
+...
+&gt;&gt;&gt; joe = MyTurtle()
+&gt;&gt;&gt; joe.onclick(joe.glow)
+&gt;&gt;&gt; joe.onrelease(joe.unglow)
+
+Clicking on joe turns fillcolor red, unclicking turns it to
+transparent.
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="ondrag"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ondrag</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">fun</span>,
+        <span class="sig-arg">btn</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">add</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.ondrag">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Bind fun to mouse-move event on this turtle on canvas.
+
+Arguments:
+fun -- a function with two arguments, to which will be assigned
+       the coordinates of the clicked point on the canvas.
+num -- number of the mouse-button defaults to 1 (left mouse button).
+
+Every sequence of mouse-move-events on a turtle is preceded by a
+mouse-click event on that turtle.
+
+Example (for a Turtle instance named turtle):
+&gt;&gt;&gt; turtle.ondrag(turtle.goto)
+
+Subsequently clicking and dragging a Turtle will move it
+across the screen thereby producing handdrawings (if pen is
+down).
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="undo"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">undo</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.undo">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>undo (repeatedly) the last turtle action.</p>
+  <p>No argument.</p>
+  <p>undo (repeatedly) the last turtle action. Number of available undo 
+  actions is determined by the size of the undobuffer.</p>
+  <p>Example (for a Turtle instance named turtle): &gt;&gt;&gt; for i in 
+  range(4): ...     turtle.fd(50); turtle.lt(80) ... &gt;&gt;&gt; for i in 
+  range(8): ...     turtle.undo() ...</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="turtlesize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">turtlesize</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">stretch_wid</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">stretch_len</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">outline</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.util.myturtle-pysrc.html#RawTurtle.shapesize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+Set/return turtle's stretchfactors/outline. Set resizemode to &quot;user&quot;.
+
+Optional arguments:
+   stretch_wid : positive number
+   stretch_len : positive number
+   outline  : positive number
+
+Return or set the pen's attributes x/y-stretchfactors and/or outline.
+Set resizemode to &quot;user&quot;.
+If and only if resizemode is set to &quot;user&quot;, the turtle will be displayed
+stretched according to its stretchfactors:
+stretch_wid is stretchfactor perpendicular to orientation
+stretch_len is stretchfactor in direction of turtles orientation.
+outline determines the width of the shapes's outline.
+
+Examples (for a Turtle instance named turtle):
+&gt;&gt;&gt; turtle.resizemode(&quot;user&quot;)
+&gt;&gt;&gt; turtle.shapesize(5, 5, 12)
+&gt;&gt;&gt; turtle.shapesize(outline=8)
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Nov  2 22:10:02 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>grid.ai.ez.block_deadend.BlockDeadend</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="grid-module.html">Package&nbsp;grid</a> ::
+        <a href="grid.ai-module.html">Package&nbsp;ai</a> ::
+        <a href="grid.ai.ez-module.html">Package&nbsp;ez</a> ::
+        <a href="grid.ai.ez.block_deadend-module.html">Module&nbsp;block_deadend</a> ::
+        Class&nbsp;BlockDeadend
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="grid.ai.ez.block_deadend.BlockDeadend-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class BlockDeadend</h1><p class="nomargin-top"><span class="codelink"><a href="grid.ai.ez.block_deadend-pysrc.html#BlockDeadend">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+            <a href="object-class.html">object</a> --+    
+                     |    
+<a href="grid.ai.abstract_ai.AbstractAI-class.html">abstract_ai.AbstractAI</a> --+
+                         |
+                        <strong class="uidshort">BlockDeadend</strong>
+</pre>
+
+<hr />
+<p>This algorithm is similar to Random Turn, except that any dead ends 
+  are remembered and a virtual wall is placed at the opening so that the 
+  robot does not re-enter. The big idea here is that once we start blocking
+  dead ends, eventually only the correct ways from start to finish will 
+  remain unblocked.</p>
+
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Nested Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-NestedClasses"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="grid.ai.abstract_ai.AbstractAI-class.html">abstract_ai.AbstractAI</a></code></b>:
+      <code><a href="abc.ABCMeta-class.html">__metaclass__</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.ai.ez.block_deadend.BlockDeadend-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">maze_model</span>,
+        <span class="summary-sig-arg">loc</span>,
+        <span class="summary-sig-arg">heading</span>,
+        <span class="summary-sig-arg">ui</span>)</span><br />
+      Initialize the AI module</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.ai.ez.block_deadend-pysrc.html#BlockDeadend.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.ai.ez.block_deadend.BlockDeadend-class.html#title" class="summary-sig-name">title</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Name of the AI algorithm that will be shown as title on UI screen</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.ai.ez.block_deadend-pysrc.html#BlockDeadend.title">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.ai.ez.block_deadend.BlockDeadend-class.html#canReset" class="summary-sig-name">canReset</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return whether AI algorithm is ready to reset.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.ai.ez.block_deadend-pysrc.html#BlockDeadend.canReset">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.ai.ez.block_deadend.BlockDeadend-class.html#currentPathDrawTail" class="summary-sig-name">currentPathDrawTail</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Specify whether to show turtle tail.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.ai.ez.block_deadend-pysrc.html#BlockDeadend.currentPathDrawTail">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="grid.ai.ez.block_deadend.BlockDeadend-class.html#getBestDirection" class="summary-sig-name">getBestDirection</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">sensors</span>)</span><br />
+      Return the best next direction based on sensor data.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="grid.ai.ez.block_deadend-pysrc.html#BlockDeadend.getBestDirection">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="grid.ai.abstract_ai.AbstractAI-class.html">abstract_ai.AbstractAI</a></code></b>:
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#beforeReset">beforeReset</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#drawBestPath">drawBestPath</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#drawFirstPath">drawFirstPath</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#drawRecentPath">drawRecentPath</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#drawRunPaths">drawRunPaths</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#exploreMaze">exploreMaze</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#hasExplored">hasExplored</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#hasReachedGoal">hasReachedGoal</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#incrementCounters">incrementCounters</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#isGoalRoomCell">isGoalRoomCell</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#markExplored">markExplored</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#nextMove">nextMove</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#nextStep">nextStep</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#onReachedGoal">onReachedGoal</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#onReset">onReset</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#pathRecentXyOffset">pathRecentXyOffset</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#percentExplored">percentExplored</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#setStatus">setStatus</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#setTitle">setTitle</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#setWalls">setWalls</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#signalUi">signalUi</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="object-class.html">object</a></code></b>:
+      <code><a href="object-class.html#__delattr__">__delattr__</a></code>,
+      <code><a href="object-class.html#__format__">__format__</a></code>,
+      <code><a href="object-class.html#__getattribute__">__getattribute__</a></code>,
+      <code><a href="object-class.html#__hash__">__hash__</a></code>,
+      <code><a href="object-class.html#__new__">__new__</a></code>,
+      <code><a href="object-class.html#__reduce__">__reduce__</a></code>,
+      <code><a href="object-class.html#__reduce_ex__">__reduce_ex__</a></code>,
+      <code><a href="object-class.html#__repr__">__repr__</a></code>,
+      <code><a href="object-class.html#__setattr__">__setattr__</a></code>,
+      <code><a href="object-class.html#__sizeof__">__sizeof__</a></code>,
+      <code><a href="object-class.html#__str__">__str__</a></code>,
+      <code><a href="object-class.html#__subclasshook__">__subclasshook__</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="grid.ai.abstract_ai.AbstractAI-class.html">abstract_ai.AbstractAI</a></code></b>:
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#BIG_NUM">BIG_NUM</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#__abstractmethods__">__abstractmethods__</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#count_center">count_center</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#count_start">count_start</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#dir_left">dir_left</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#dir_reverse">dir_reverse</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#dir_right">dir_right</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#dir_sensors">dir_sensors</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#heading_convert">heading_convert</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#path_best">path_best</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#path_current">path_current</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#path_first">path_first</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#path_first_recorded">path_first_recorded</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#run">run</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#run_count">run_count</a></code>
+      </p>
+    <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="grid.ai.abstract_ai.AbstractAI-class.html">abstract_ai.AbstractAI</a></code></b> (private):
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#_abc_cache" onclick="show_private();">_abc_cache</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#_abc_negative_cache" onclick="show_private();">_abc_negative_cache</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#_abc_negative_cache_version" onclick="show_private();">_abc_negative_cache_version</a></code>,
+      <code><a href="grid.ai.abstract_ai.AbstractAI-class.html#_abc_registry" onclick="show_private();">_abc_registry</a></code>
+      </p></div>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="object-class.html">object</a></code></b>:
+      <code><a href="object-class.html#__class__">__class__</a></code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">maze_model</span>,
+        <span class="sig-arg">loc</span>,
+        <span class="sig-arg">heading</span>,
+        <span class="sig-arg">ui</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.ai.ez.block_deadend-pysrc.html#BlockDeadend.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Initialize the AI module</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>maze_model</code></strong> (grid.ai.model.maze_model.MazeModel) - instance of maze_model class</li>
+        <li><strong class="pname"><code>loc</code></strong> ([0, 0]. Array of len 2 specifying x and y coordinates of robot) - start location of the robot</li>
+        <li><strong class="pname"><code>heading</code></strong> (one of the strings 'up', 'right', 'down', left') - initial heading direction of the robot. Up</li>
+        <li><strong class="pname"><code>ui</code></strong> (slam_ui.SlamUi) - handle to instance of ui class</li>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="title"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">title</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.ai.ez.block_deadend-pysrc.html#BlockDeadend.title">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Name of the AI algorithm that will be shown as title on UI screen</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="grid.ai.abstract_ai.AbstractAI-class.html#title">abstract_ai.AbstractAI.title</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="canReset"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">canReset</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.ai.ez.block_deadend-pysrc.html#BlockDeadend.canReset">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return whether AI algorithm is ready to reset. Block Deadend algo 
+  resets when robot has reached center.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="currentPathDrawTail"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">currentPathDrawTail</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.ai.ez.block_deadend-pysrc.html#BlockDeadend.currentPathDrawTail">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Specify whether to show turtle tail. Block Deadend does not show tail 
+  for current path</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="grid.ai.abstract_ai.AbstractAI-class.html#currentPathDrawTail">abstract_ai.AbstractAI.currentPathDrawTail</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getBestDirection"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getBestDirection</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">sensors</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="grid.ai.ez.block_deadend-pysrc.html#BlockDeadend.getBestDirection">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the best next direction based on sensor data. Function is 
+  biased towards taking goalroom cell and unexplored cells. Otherwise it 
+  will pick a random direction from the set of possible openings from the 
+  current cell.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>sensors</code></strong> (array containing three distances from three walls.) - Sensor inputs are a list of three distances from the robot's 
+          left, front, and right-facing sensors, in that order.</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="grid.ai.abstract_ai.AbstractAI-class.html#getBestDirection">abstract_ai.AbstractAI.getBestDirection</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Wed Nov  2 22:10:02 2016
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
