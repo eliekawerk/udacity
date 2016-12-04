@@ -5,8 +5,10 @@ I completed this course in Nov, 2016.
 Recommended order for exploring these projects is as follows:
 
 - Titanic Survival Exploration
+- Train a Smartcab to Drive
 - Capstone: Plot and Navigate a Virtual Maze
 - Technical Interview Practice
+- ML Interview Practice
 
 ## About this Course
 
