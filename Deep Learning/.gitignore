@@ -1,0 +1,7 @@
+/.project
+/.pydevproject
+**/*.DS_Store
+notMNIST_large
+notMNIST_small
+*.tar.gz
+*.pickle
