@@ -1,0 +1,5 @@
+/.project
+/.pydevproject
+**/*.DS_Store
+test.p
+train.p
