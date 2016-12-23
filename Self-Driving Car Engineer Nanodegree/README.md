@@ -2,7 +2,12 @@
 
 I'm currently taking this course in Nov, 2016
 
-I'll checkin my solutions of homework and final project once the course changes its material.
+Recommended order for exploring these projects is as follows:
+
+- LaneLines-P1
+- TrafficSigns-P2
+- TensorFlow-Lab
+- BehavioralCloning-P3
 
 ## About this Course
 
