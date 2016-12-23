@@ -17,7 +17,7 @@ The following videos show the final model driving the car autonomously on two di
 
 Track 1                       |  Track 2
 :----------------------------:|:------------------------------:
-![Track 1](IMG/track-1.png) | ![Track 2](IMG/track-2.png)
+[![Track 1](IMG/track-1.png)](https://youtu.be/mYejcv8uDkw) | [![Track 2](IMG/track-2.png)](https://youtu.be/TlTQVpRr6N8)
 
 ## Report
 
