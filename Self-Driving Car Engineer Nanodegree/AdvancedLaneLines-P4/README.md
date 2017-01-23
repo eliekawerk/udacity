@@ -48,13 +48,13 @@ Let us now go over individual steps of lane detection pipeline.
 
 #### Distortion Correction
 
-The code for this step is contained in [camera_calibrator.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/camera_calibrator.py). Camera images are calibrated in the function `calibrate_camera()` using provided chessboard images. Then frames from the car videos are corrected by applying the calculated distortion matrix in `undistort()` function. 
+The code for this step is contained in [camera_calibrator.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/camera_calibrator.py). Camera images are calibrated in the function `calibrate_camera()` (lines 77 through 111) using provided chessboard images. Then frames from the car videos are corrected by applying the calculated distortion matrix in `undistort()` (lines 32 through 36) function. 
 
 ![distortion_corrected](output_images/distortion_corrected.png)
 
 #### Lane Mask Generation
 
-The code for this step is contained in [mask_generator.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/mask_generator.py)
+The code for Lane Mask Generation is contained in [mask_generator.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/mask_generator.py). It combines various techniques like sobel operations, color transforms, gradients, color extraction and noise reduction to generate an image mask that can later be used to extract lane pixels from a given video frame. Through a lot of trial and error, various thresholds are chosen. `generate_lane_mask()` function in lines 113 through 147 is the entry point. It makes use of other helper functions in the same file to generate the combined mask image. 
 
 ![combined_mask](output_images/combined_mask.png)
 
@@ -104,26 +104,6 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
 
 ![alt text][image3]
-
-####3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
-
-
-
-####4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
-
-Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
-
-![alt text][image5]
-
-####5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
-
-I did this in lines # through # in my code in `my_other_file.py`
-
-####6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
-
-I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
-
-![alt text][image6]
 
 ---
 
