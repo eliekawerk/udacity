@@ -9,6 +9,7 @@ Recommended order for exploring these projects is as follows:
 - TensorFlow-Lab
 - BehavioralCloning-P3
 - AdvancedLaneLines-P4
+- VehicleDetectionTracking-P5
 
 ## About this Course
 
