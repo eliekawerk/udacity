@@ -122,15 +122,9 @@ else:
 
 #### Final Step: Overlay & Inverse Transformation
 
+The code for this step is contained in [lane_finder.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/lane_finder.py). In function `render_predicted_lane_area()` lines 47 through 68, I overlay the computed polynomial lane area in Green and Lane's side line in Yellow. Then we unwarp the processed image to its original perspective. That's it!
+
 ![lane_found](output_images/lane_found.png)
-
----
-
-###Pipeline (video)
-
-####1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
-
-Here's a [link to my video result](./project_video.mp4)
 
 ---
 
