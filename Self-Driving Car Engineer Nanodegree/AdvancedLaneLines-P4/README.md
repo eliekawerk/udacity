@@ -122,15 +122,14 @@ else:
 
 #### Final Step: Overlay & Inverse Transformation
 
-The code for this step is contained in [lane_finder.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/lane_finder.py). In function `render_predicted_lane_area()` lines 47 through 68, I overlay the computed polynomial lane area in Green and Lane's side line in Yellow. Then we unwarp the processed image to its original perspective. That's it!
+The code for this step is contained in [lane_finder.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/lane_finder.py). In function `render_predicted_lane_area()` lines 47 through 68, I overlay the computed polynomial lane area in Green and Lanes itself in Yellow. Then we unwarp the processed image to its original perspective. That's it!
 
 ![lane_found](output_images/lane_found.png)
 
 ---
 
-###Discussion
+### Conclusion
 
-####1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+This was a bit tricky project. It involved a lot of trial and error in finding the right thresholds to make the pipeline work. There are so many hyper-parameters to tune that I think this approach is not very robust. Although, this mechanical approach finally worked out for first two videos, I have a suspicion that it may not work for real wild world. I think Neural Network based approach is fitting for this problem. In my next version, I'll try to find a Neural Network based solution.
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
-
+The harder challenge video is very tricky. I could not make it to work. Current hyper-parameters (various algorithm thresholds) are not able to extract lane pixels correctly. With enough time and perseverance I might be able to tackle it.
