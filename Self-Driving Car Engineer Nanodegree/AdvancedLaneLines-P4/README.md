@@ -42,7 +42,38 @@ I then used the output `objpoints` and `imgpoints` to compute the camera calibra
 
 ![camera_calibrated](output_images/camera_calibrated.png)
 
-###Pipeline (single images)
+### Pipeline 
+
+Let us now go over individual steps of lane detection pipeline.
+
+#### Distortion Correction
+
+The code for this step is contained in [camera_calibrator.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/camera_calibrator.py). Camera images are calibrated in the function `calibrate_camera()` using provided chessboard images. Then frames from the car videos are corrected by applying the calculated distortion matrix in `undistort()` function. 
+
+![distortion_corrected](output_images/distortion_corrected.png)
+
+#### Lane Mask Generation
+
+The code for this step is contained in [mask_generator.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/mask_generator.py)
+
+![combined_mask](output_images/combined_mask.png)
+
+#### Perspective Transformation
+
+The code for this step is contained in [perspective_transformer.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/perspective_transformer.py)
+
+![perspective_transformed](output_images/perspective_transformed.png)
+
+#### Pixel Histogram Analysis
+
+The code for this step is contained in [histogram_utils.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/utils/histogram_utils.py)
+
+#### Polynomial Fitting
+
+The code for this step is contained in [lane_utils.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/utils/lane_utils.py)
+
+![polygon_marked](output_images/polygon_marked.png)
+
 
 ####1. Provide an example of a distortion-corrected image.
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
