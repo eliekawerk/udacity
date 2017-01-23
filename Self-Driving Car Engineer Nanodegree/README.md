@@ -8,6 +8,7 @@ Recommended order for exploring these projects is as follows:
 - TrafficSigns-P2
 - TensorFlow-Lab
 - BehavioralCloning-P3
+- AdvancedLaneLines-P4
 
 ## About this Course
 
