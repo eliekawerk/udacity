@@ -58,17 +58,17 @@ In this step, I used a combination of color and gradient thresholds to generate 
 
 The code for Lane Mask Generation is contained in [mask_generator.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/mask_generator.py). It combines various techniques like sobel operations, color transforms, gradients, color extraction and noise reduction to generate an image mask. Through a lot of trial and error, various thresholds are chosen. `generate_lane_mask()` function in lines 113 through 147 is the entry point. It makes use of other helper functions in the same file to generate the combined mask image. Following is a brief description of each sub-step in order of execution:
 
-- **Color Channel Selection:** An averaged gray scale image from the U and V color channels of the YUV space and also the S channel of the HLS space is used as input. Through some experimentation these channels were found to have brighter and clearer lane edges.
+- **Color Channel Selection:** An averaged gray scale image from the U and V color channels of the YUV space and also the S channel of the HLS space is used as input. Through some experimentation these channels were found to have brighter and clearer lane edges. (Lines 120 through 125)
 
-- **Sobel Operation:** This detects edges by computing approximate gradient of the image intensity function. It is applied in both x and y directions and combined to keep pixels that appear in both results and over certain threshold. 
+- **Sobel Operation:** This detects edges by computing approximate gradient of the image intensity function. It is applied in both x and y directions and combined to keep pixels that appear in both results and over certain threshold. (Lines 7 through 24)
 
-- **Gradient Magnitude & Direction:** The magnitude and direction of the gradient is calculated and combined by keeping only pixels within respective thresholds. 
+- **Gradient Magnitude & Direction:** The magnitude and direction of the gradient is calculated and combined by keeping only pixels within respective thresholds. (Lines 26 through 49)
 
-- **Color Isolation:** Through basic color thresholding yellow lane pixels are isolated.
+- **Color Isolation:** Through basic color thresholding yellow lane pixels are isolated. (Lines 62 through 71)
 
-- **High Intensity Detection:** In order to make process more resilient against different lighting conditions, all the pixels which have values above a given percentile are isolated.
+- **High Intensity Detection:** In order to make process more resilient against different lighting conditions, all the pixels which have values above a given percentile are isolated. (Lines 85 through 94)
 
-- **Noise Reduction:** Used a 2d filter to reduce the noise in the image.
+- **Noise Reduction:** Used a 2d filter to reduce the noise in the image. (Lines 97 through 110)
 
 In the end, the results are combined through a bitwise OR operation to get the final lane mask.
 
