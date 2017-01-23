@@ -4,14 +4,13 @@ The goal of this project is to detect lane lines on videos through advance techn
 
 ---
 
-## Result
+## Results
 
 The following videos show the final results of the lanes being detected on three different tracks with varying difficulty:
 
-Project Track                 |Challenge Track                |Harder Challenge Track                    
+Project Track                 |Challenge Track                |Harder Challenge Track <sup>*</sup>                   
 :----------------------------:|:-----------------------------:|:------------------------------:
 [![Track 1](output_images/project_track.png)](https://youtu.be/9OrWgTO0ZbY) | [![Track 2](output_images/challenge_track.png)](https://youtu.be/2cPPiAE76mk) | [![Track 3](output_images/harder_challenge_track.png)](https://youtu.be/L_QP8J84Jj8)
-
 
 The steps of this project are the following:
 
@@ -24,9 +23,7 @@ The steps of this project are the following:
 * Warp the detected lane boundaries back onto the original image.
 * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
-
-
-## Rubric Points
+## Report
 
 Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
@@ -108,7 +105,18 @@ The process described above is bit slow to apply to each and every frame of the 
 
 #### Polynomial Fitting
 
-The code for this step is contained in [lane_utils.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/utils/lane_utils.py)
+Once all the pixel coordinates (x, y) have been assigned to respective lanes, a second order polynomial is fitted. This is our line of detected lanes. For smoother results, polynomials are averaged over last few frames. This polynomial is also used to calculate the radius of curvature of the lane and car's offset from the center of the lane. 
+
+The code for this step is contained in [line.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/utils/line.py) and [lane_utils.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/utils/lane_utils.py). Few lines of interest are following:
+
+```
+self.current_fit = np.polyfit(self.allx, self.ally, 2)
+
+if self.best_fit is None:
+    self.best_fit = self.current_fit
+else:
+    self.best_fit = (self.best_fit * (self.n_frames - 1) + self.current_fit) / self.n_frames
+```
 
 ![polygon_marked](output_images/polygon_marked.png)
 
