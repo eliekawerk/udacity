@@ -54,7 +54,23 @@ The code for this step is contained in [camera_calibrator.py](https://github.com
 
 #### Lane Mask Generation
 
-The code for Lane Mask Generation is contained in [mask_generator.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/mask_generator.py). It combines various techniques like sobel operations, color transforms, gradients, color extraction and noise reduction to generate an image mask that can later be used to extract lane pixels from a given video frame. Through a lot of trial and error, various thresholds are chosen. `generate_lane_mask()` function in lines 113 through 147 is the entry point. It makes use of other helper functions in the same file to generate the combined mask image. 
+In this step, I used a combination of color and gradient thresholds to generate a binary image mask that can be used to extract lane pixels from a given video frame. 
+
+The code for Lane Mask Generation is contained in [mask_generator.py](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/AdvancedLaneLines-P4/source_code/mask_generator.py). It combines various techniques like sobel operations, color transforms, gradients, color extraction and noise reduction to generate an image mask. Through a lot of trial and error, various thresholds are chosen. `generate_lane_mask()` function in lines 113 through 147 is the entry point. It makes use of other helper functions in the same file to generate the combined mask image. Following is a brief description of each sub-step in order of execution:
+
+- **Color Channel Selection:** An averaged gray scale image from the U and V color channels of the YUV space and also the S channel of the HLS space is used as input. Through some experimentation these channels were found to have brighter and clearer lane edges.
+
+- **Sobel Operation:** This detects edges by computing approximate gradient of the image intensity function. It is applied in both x and y directions and combined to keep pixels that appear in both results and over certain threshold. 
+
+- **Gradient Magnitude & Direction:** The magnitude and direction of the gradient is calculated and combined by keeping only pixels within respective thresholds. 
+
+- **Color Isolation:** Through basic color thresholding yellow lane pixels are isolated.
+
+- **High Intensity Detection:** In order to make process more resilient against different lighting conditions, all the pixels which have values above a given percentile are isolated.
+
+- **Noise Reduction:** Used a 2d filter to reduce the noise in the image.
+
+In the end, the results are combined through a bitwise OR operation to get the final lane mask.
 
 ![combined_mask](output_images/combined_mask.png)
 
@@ -95,15 +111,6 @@ The code for this step is contained in [lane_utils.py](https://github.com/srikan
 #### Final Step: Overlay & Inverse Transformation
 
 ![lane_found](output_images/lane_found.png)
-
-
-####1. Provide an example of a distortion-corrected image.
-To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
-![alt text][image2]
-####2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
-I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
-
-![alt text][image3]
 
 ---
 
