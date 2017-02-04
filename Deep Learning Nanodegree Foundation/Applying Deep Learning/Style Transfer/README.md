@@ -6,6 +6,7 @@ The network has been trained on a few different styles ([here](https://github.co
 
 I used it to style our family dog Daphne in various styles
 
+![collage](collage.png)
 
 To try it out yourself, you can find the code in the [fast-style-transfer](https://github.com/lengstrom/fast-style-transfer) repo.
 
