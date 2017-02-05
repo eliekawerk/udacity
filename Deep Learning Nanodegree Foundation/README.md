@@ -10,6 +10,7 @@ Recommended order for exploring these projects is as follows:
  - Flappy Bird
 - Your First Neural Network
 - Sentiment Analysis
+- Sentiment Analysis with TFLearn
 
 ## About this Course
 
