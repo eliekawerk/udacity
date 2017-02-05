@@ -19,4 +19,6 @@ In this project, we will build a deep network from scratch that classifies movie
 - **STEP 6**: Reducing Noise by Strategically Reducing the Vocabulary
 - Analysis: What's going on in the weights?
 
-[Report](http://htmlpreview.github.io/?https://github.com/srikanthpagadala/udacity/blob/master/Deep%20Learning%20Nanodegree%20Foundation/Sentiment%20Analysis/report.html){:target="_blank"}
+
+
+[Report](http://htmlpreview.github.io/?https://github.com/srikanthpagadala/udacity/blob/master/Deep%20Learning%20Nanodegree%20Foundation/Sentiment%20Analysis/report.html)
