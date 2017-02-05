@@ -6,7 +6,7 @@ Recommended order for exploring these projects is as follows:
 
 - Applying Deep Learning
  - Style Transfer
- - DeepTraffic
+ - Deep Traffic
  - Flappy Bird
 
 ## About this Course
