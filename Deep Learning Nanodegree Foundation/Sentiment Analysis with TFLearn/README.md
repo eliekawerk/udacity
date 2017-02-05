@@ -5,4 +5,4 @@ In this notebook, we'll build upon our previous project - ["Sentiment Analysis f
 [TFLearn](http://tflearn.org/) does a lot of things for you such as initializing weights, running the forward pass, and performing backpropagation to update the weights. You end up just defining the architecture of the network (number and type of layers, number of units, etc.) and how it is trained.
 
 
-[Report](http://htmlpreview.github.io/?https://github.com/srikanthpagadala/udacity/blob/master/Deep%20Learning%20Nanodegree%20Foundation/Sentiment%20Analysis/report.html)
+[Report](http://htmlpreview.github.io/?https://github.com/srikanthpagadala/udacity/blob/master/Deep%20Learning%20Nanodegree%20Foundation/Sentiment%20Analysis%20with%20TFLearn/report.html)
