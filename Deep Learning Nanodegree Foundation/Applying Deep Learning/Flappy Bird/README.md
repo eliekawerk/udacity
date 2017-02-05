@@ -4,7 +4,7 @@ In this example, we will see a Deep Learning agent playing Flappy Bird! We have 
 
 We will be following this [repository](https://github.com/yenchenlin/DeepLearningFlappyBird) by Yenchen Lin.
 
-[![flappy-bird](flappy-bird.jpg)](https://youtu.be/9OrWgTO0ZbY) 
+[![flappy-bird](flappy-bird.jpg)](https://youtu.be/tNt8d8xz2OI) 
 
 ### Steps
 
