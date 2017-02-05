@@ -9,6 +9,7 @@ Recommended order for exploring these projects is as follows:
  - Deep Traffic
  - Flappy Bird
 - Your First Neural Network
+- Sentiment Analysis
 
 ## About this Course
 
