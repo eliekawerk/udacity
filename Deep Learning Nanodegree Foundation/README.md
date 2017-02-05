@@ -8,6 +8,7 @@ Recommended order for exploring these projects is as follows:
  - Style Transfer
  - Deep Traffic
  - Flappy Bird
+- Your First Neural Network
 
 ## About this Course
 
