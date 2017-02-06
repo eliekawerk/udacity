@@ -11,6 +11,7 @@ Recommended order for exploring these projects is as follows:
 - Your First Neural Network
 - Sentiment Analysis
 - Sentiment Analysis with TFLearn
+- Sentiment Analysis with TFLearn RNN 
 
 ## About this Course
 
