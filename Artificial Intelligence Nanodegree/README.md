@@ -5,6 +5,7 @@ I'm currently taking this course in Jan, 2017
 Recommended order for exploring these projects is as follows:
 
 - Solving a Sudoku with AI
+- Build a Game-playing Agent
 
 ## About this Course
 
