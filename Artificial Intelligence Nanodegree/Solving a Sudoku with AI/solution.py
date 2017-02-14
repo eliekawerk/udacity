@@ -38,8 +38,13 @@ def naked_twins(values):
         for unit in units:
             for box in unit:
                 if box != nt[0] and box != nt[1]:
+                    
                     new_values[box] = new_values[box].replace(new_values[nt[0]][0], '')
+                    assign_value(new_values, box, new_values[box]) # viz
+                    
                     new_values[box] = new_values[box].replace(new_values[nt[0]][1], '')
+                    assign_value(new_values, box, new_values[box]) # viz
+                    
     if len([box for box in new_values.keys() if len(new_values[box]) == 0]):
         return False
     return new_values
@@ -71,7 +76,7 @@ diag_units = dict((s, [u for u in diag_unitlist if s in u])
 diag_peers = dict((s, set(sum(diag_units[s],[]))-set([s]))
              for s in squares)
 
-def grid_values(grid):
+def grid_values(grid, show_dots=False):
     """
     Convert grid into a dict of {square: char} with '123456789' for empties.
     Args:
@@ -86,7 +91,10 @@ def grid_values(grid):
         if c in digits:
             chars.append(c)
         if c == '.':
-            chars.append(digits)
+            if show_dots:
+                chars.append('.')
+            else:
+                chars.append(digits)
     assert len(chars) == 81
     return dict(zip(squares, chars))
 
@@ -115,6 +123,7 @@ def eliminate(values):
         digit = new_values[box]
         for peer in diag_peers[box]:
             new_values[peer] = new_values[peer].replace(digit,'')
+            assign_value(new_values, peer, new_values[peer]) # viz
     return new_values
 
 def only_choice(values):
@@ -128,6 +137,7 @@ def only_choice(values):
             dplaces = [box for box in unit if digit in new_values[box]]
             if len(dplaces) == 1:
                 new_values[dplaces[0]] = digit
+                assign_value(new_values, dplaces[0], new_values[dplaces[0]]) # viz
     return new_values
 
 def reduce_puzzle(values):
