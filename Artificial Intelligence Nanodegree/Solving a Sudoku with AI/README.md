@@ -2,7 +2,7 @@
 
 ## Result:
 
-[![](/images/result.png)](https://youtu.be/ETiHDwsZ9yQ) 
+[![](images/result.png)](https://youtu.be/ETiHDwsZ9yQ) 
 
 ## Project:
 
