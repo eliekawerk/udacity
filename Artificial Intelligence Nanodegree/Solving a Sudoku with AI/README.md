@@ -1,5 +1,9 @@
 # Artificial Intelligence Nanodegree
 
+## Result:
+
+[![](/images/result.png)](https://youtu.be/ETiHDwsZ9yQ) 
+
 ## Project:
 
 Congratulations on making it all the way through! You now have a program (Solving a Sudoku with AI.ipynb) that can solve any Sudoku puzzle! But can you extend your solution to include more heuristics? How about to solve a modified version of the puzzle?
