@@ -4,7 +4,7 @@ This project is possible thanks to the generous contributions of the UC Berkeley
 
 ## Result
 
-[![](img/pacman_youtube.png)](https://youtu.be/E1tKdWkaHIM) 
+[![](images/pacman_youtube.png)](https://youtu.be/E1tKdWkaHIM) 
 
 ## Commands
 
