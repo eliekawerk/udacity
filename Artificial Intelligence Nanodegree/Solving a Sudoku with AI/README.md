@@ -1,4 +1,4 @@
-# Artificial Intelligence Nanodegree
+# Solving a Sudoku with AI
 
 ## Result:
 

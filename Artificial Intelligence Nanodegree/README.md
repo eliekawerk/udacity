@@ -6,6 +6,7 @@ Recommended order for exploring these projects is as follows:
 
 - Solving a Sudoku with AI
 - Build a Game-playing Agent
+- Teaching Pac-Man to Search
 
 ## About this Course
 
