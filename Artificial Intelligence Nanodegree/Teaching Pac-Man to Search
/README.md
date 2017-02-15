@@ -1,5 +1,11 @@
 # Teaching Pac-Man to Search
 
+In this project, we will teach Pac-Man to search his world to complete the following tasks:
+
+- find a single obstacle.
+- find multiple obstacles.
+- find the fastest way to eat all the food in the map.
+
 This project is possible thanks to the generous contributions of the UC Berkeley AI division and their work on the [Pac-Man Project](http://inst.eecs.berkeley.edu/~cs188/pacman/project_overview.html).  Note: This project is implemented in python 2.7
 
 ## Result
