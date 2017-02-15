@@ -4,12 +4,13 @@ This project is possible thanks to the generous contributions of the UC Berkeley
 
 ## Result
 
-![](img/pacman_youtube.png)
+[![](img/pacman_youtube.png)](https://youtu.be/E1tKdWkaHIM) 
 
 ## Commands
 
 Try following commands with varying mazes and search algorithms
 
+<pre>
 python pacman.py
 python pacman.py --layout testMaze --pacman GoWestAgent
 python pacman.py --layout tinyMaze --pacman GoWestAgent
@@ -32,7 +33,7 @@ python pacman.py -l testSearch -p AStarFoodSearchAgent
 python pacman.py -l trickySearch -p AStarFoodSearchAgent
 python pacman.py -l bigSearch -p ClosestDotSearchAgent -z .5 
 python pacman.py -l bigSearch -p ApproximateSearchAgent -z .5 -q 
-
+</pre>
 
 ## Instructions
 
