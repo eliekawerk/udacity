@@ -99,6 +99,21 @@ The tournament opponents are listed below. (See also: sample heuristics and play
 - AB_Open: CustomPlayer agent using fixed-depth alpha-beta search and the open_move_score heuristic
 - AB_Improved: CustomPlayer agent using fixed-depth alpha-beta search and the improved_score heuristic
 
+## Part 2: Research Review
+
+The field of Artificial lIntelligence is continually changing and advancing. To be an AI Engineer at the cutting edge of your field, you'll need to be able to read and communicate some of these advancements with your peers. In order to help you get comfortable with this, in the second part of this project you will read a seminal paper in the field of Game-Playing and write a simple one page summary on it. Here are your instructions:
+
+- Select a Game-Playing paper from the following list or another of your choosing:
+ - [Game Tree Searching by Min / Max Approximation](https://people.csail.mit.edu/rivest/pubs/Riv87c.pdf) by Ron Rivest, MIT (Fun fact, Ron Rivest is the R is in the RSA cryptographic protocol).
+ - [Deep Blue](https://pdfs.semanticscholar.org/ad2c/1efffcd7c3b7106e507396bdaa5fe00fa597.pdf) by the IBM Watson Team (Fun fact, Deep Blue beat Gary Kasparov in Chess in one of the most famous AI spectacles of the 20th century).
+ - [AlphaGo](https://storage.googleapis.com/deepmind-media/alphago/AlphaGoNaturePaper.pdf) by the DeepMind Team.
+ - Other paper on Game-Playing of your choosing.
+ 
+- Write a simple one page summary of the paper covering the following:
+ - A brief summary of the paper's goals or techniques introduced (if any).
+ - A brief summary of the paper's results (if any).
+
+Submit this as: research_review.pdf
 
 ## Submitting
 
