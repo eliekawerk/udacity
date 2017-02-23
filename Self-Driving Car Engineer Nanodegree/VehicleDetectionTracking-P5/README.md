@@ -4,7 +4,7 @@ In this project, the goal is to write a software pipeline to detect vehicles in 
 
 ## Results
 
-The following videos show the final results of the lanes being detected on two different tracks with varying difficulty:
+The following videos show the final results of the vehicles being detected on two different tracks with varying difficulty:
 
 Project Track                 |Challenge Track                                   
 :----------------------------:|:-----------------------------:
