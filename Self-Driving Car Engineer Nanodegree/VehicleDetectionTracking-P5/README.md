@@ -41,19 +41,19 @@ The code for this step is contained in the 6th cell of the [Train SVM Classifier
 
 I started by reading in all the `vehicle` and `non-vehicle` images.  Here are examples of one of each of the `vehicle` and `non-vehicle` classes:
 
-![][output_images/car_not-car.png]
+![](output_images/car_not-car.png)
 
 I then explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`). I grabbed random images from each of the two classes and displayed them to get a feel for what the `skimage.hog()` output looks like.
 
-![][output_images/hog_features.png]
+![](output_images/hog_features.png)
 
 Here is an example using the `YUV` color space and HOG parameters of `orientations=8`, `pixels_per_cell=(4, 4)` and `cells_per_block=(2, 2)`. `color_hist()` is implemented in [feature_extractor.py](source_code/detect_track/feature_extractor.py) (lines 49 through 57)
 
-![][output_images/color_histogram.png]
+![](output_images/color_histogram.png)
 
 Here is an example showing image colors binned as features. `bin_spatial()` is implemented in [feature_extractor.py](source_code/detect_track/feature_extractor.py) (lines 42 through 46)
 
-![][output_images/binned_color.png]
+![](output_images/binned_color.png)
 
 I tried various combinations of parameters and kept on iterating until my classifier achieved desired accuracy of **99.98%**. Following are the final configurations that I settled down to.
 
