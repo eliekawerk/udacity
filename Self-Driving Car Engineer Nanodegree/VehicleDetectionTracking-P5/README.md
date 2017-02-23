@@ -71,7 +71,13 @@ hist_feat = True  # Histogram features on or off
 hog_feat = True  # HOG features on or off
 </pre>
 
-I trained a linear SVM using above configurations. 
+Features thus extracted are very large in number. `Cars` and `Not-Cars` features are combined into a giant matrix and then standarized using `sklearn.StandardScaler()` so that features are scaled to zero mean and unit variance before training the classifier.
+
+Since at this point number of features are super large, I applied PCA reduction to the features. The code for this step is contained in the 10-12th cells of the [Train SVM Classifier](notebooks/Train SVM Classifier.ipynb) notebook. 
+
+Then I randomized the dataset and partitioned it into training and testing set using `sklearn.train_test_split()`.
+
+Finally, I trained a linear SVM using above configurations and PCA reduced features set. SVM training took 13seconds and achieved a Test Accuracy of 99.49%. Model is then saved to the disk for later use. 
 
 ###Sliding Window Search
 
