@@ -73,7 +73,7 @@ hog_feat = True  # HOG features on or off
 
 Features thus extracted are very large in number. `Cars` and `Not-Cars` features are combined into a giant matrix and then standarized using `sklearn.StandardScaler()` so that features are scaled to zero mean and unit variance before training the classifier.
 
-Since at this point number of features are super large, I applied PCA reduction to the features. The code for this step is contained in the 10-12th cells of the [Train SVM Classifier](notebooks/Train SVM Classifier.ipynb) notebook. 
+Since at this point the number of features are super large, I applied PCA reduction to the features. The code for this step is contained in the 10-12th cells of the [Train SVM Classifier](notebooks/Train SVM Classifier.ipynb) notebook. 
 
 Then I randomized the dataset and partitioned it into training and testing set using `sklearn.train_test_split()`.
 
@@ -81,26 +81,24 @@ Finally, I trained a linear SVM using above configurations and PCA reduced featu
 
 ###Sliding Window Search
 
-####1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
+The system was designed to allow the definition of multiple search areas, each with different stride, size, and padding. Each search area can be processed in a different thread to improve performance. The image below shows the used search areas. The code for this step is contained in [car_finder.py](source_code/car_finder.py) in functions `slide_window()` and `search_windows()`.
 
-I decided to search random window positions at random scales all over the image and came up with this (ok just kidding I didn't actually ;):
+![](output_images/sliding_windows.png)
 
-![alt text][image3]
+Following image shows positive predictions as returned by the our trained SVM classifier on the sliding window image patch.
 
-####2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to try to minimize false positives and reliably detect cars?
+![](output_images/prediction.png)
 
-Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
+For each positive prediction, the value of the decision function is added onto a heatmap in the area of the bounding box. When processing a video the heatmap is averaged over 8 frames to smoothen resulting bounding boxes. To remove false positives the heatmap is then thresholded. ([car_finder.py](source_code/car_finder.py) in functions `process_frame()` and `apply_threshold()` lines 152-156).
 
-![alt text][image4]
----
+![](output_images/heatmap.png)
+
+There are multiple ways of generating bounding boxes out of a heat map. I used `scipy.label()` function to draw contours around the positive detection in the heatmap image. ([car_finder.py](source_code/car_finder.py) in function `process_frame()` line 288).
+
+![](output_images/contours.png)
+
 
 ### Video Implementation
-
-####1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
-Here's a [link to my video result](./project_video.mp4)
-
-
-####2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
 
 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used blob detection in Sci-kit Image (Determinant of a Hessian [`skimage.feature.blob_doh()`](http://scikit-image.org/docs/dev/auto_examples/plot_blob.html) worked best for me) to identify individual blobs in the heatmap and then determined the extent of each blob using [`skimage.morphology.watershed()`](http://scikit-image.org/docs/dev/auto_examples/plot_watershed.html). I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
 
