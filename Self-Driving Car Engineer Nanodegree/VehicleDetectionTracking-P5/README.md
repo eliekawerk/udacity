@@ -1,8 +1,15 @@
 # Vehicle Detection
-[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 
 In this project, your goal is to write a software pipeline to detect vehicles in a video, but the main output or product we want you to create is a detailed writeup of the project.  Check out the [writeup template](https://github.com/rykeenan/CarND-Vehicle-Detection/blob/master/writeup_template.md) for this project and use it as a starting point for creating your own writeup.  
+
+## Results
+
+The following videos show the final results of the lanes being detected on three different tracks with varying difficulty:
+
+Project Track                 |Challenge Track                                   
+:----------------------------:|:-----------------------------:
+[![Track 1](output_images/project_track.png)](https://youtu.be/x8kqF5M8idc) | [![Track 2](output_images/challenge_track.png)](https://youtu.be/MnQ2CQFppB4) 
 
 Creating a great writeup:
 ---
