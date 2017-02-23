@@ -100,13 +100,14 @@ There are multiple ways of generating bounding boxes out of a heat map. I used `
 
 ### Video Implementation
 
-I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used blob detection in Sci-kit Image (Determinant of a Hessian [`skimage.feature.blob_doh()`](http://scikit-image.org/docs/dev/auto_examples/plot_blob.html) worked best for me) to identify individual blobs in the heatmap and then determined the extent of each blob using [`skimage.morphology.watershed()`](http://scikit-image.org/docs/dev/auto_examples/plot_watershed.html). I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
+I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used blob detection in Sci-kit Image to identify individual blobs in the heatmap. I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
 
-Here's an example result showing the heatmap and bounding boxes overlaid on a frame of video:
+Here's an example result showing bounding boxes overlaid on a frame of video:
 
-![alt text][image5]
+Project Track                 |Challenge Track                                   
+:----------------------------:|:-----------------------------:
+[![Track 1](output_images/project_track.png)](https://youtu.be/x8kqF5M8idc) | [![Track 2](output_images/challenge_track.png)](https://youtu.be/MnQ2CQFppB4) 
 
----
 
 ### Discussion
 
