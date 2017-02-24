@@ -9,6 +9,8 @@ Recommended order for exploring these projects is as follows:
 - TensorFlow-Lab
 - LeNet-Lab
 - TransferLearning
+ - AlexNet-Lab
+ - BottleneckFeatures-Lab (VGG, Inception and ResNet)
 - BehavioralCloning-P3
 - AdvancedLaneLines-P4
 - VehicleDetectionTracking-P5
