@@ -7,6 +7,8 @@ Recommended order for exploring these projects is as follows:
 - LaneLines-P1
 - TrafficSigns-P2
 - TensorFlow-Lab
+- LeNet-Lab
+- TransferLearning
 - BehavioralCloning-P3
 - AdvancedLaneLines-P4
 - VehicleDetectionTracking-P5
