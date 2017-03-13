@@ -4,16 +4,17 @@ I'm currently taking this course in Nov, 2016
 
 Recommended order for exploring these projects is as follows:
 
-- LaneLines-P1
-- TrafficSigns-P2
-- TensorFlow-Lab
-- LeNet-Lab
-- TransferLearning
- - AlexNet-Lab
- - BottleneckFeatures-Lab (VGG, Inception and ResNet)
-- BehavioralCloning-P3
-- AdvancedLaneLines-P4
-- VehicleDetectionTracking-P5
+- TERM 1
+ - LaneLines-P1
+ - TrafficSigns-P2
+ - TensorFlow-Lab
+ - LeNet-Lab
+ - TransferLearning
+  - AlexNet-Lab
+  - BottleneckFeatures-Lab (VGG, Inception and ResNet)
+ - BehavioralCloning-P3
+ - AdvancedLaneLines-P4
+ - VehicleDetectionTracking-P5
 
 ## About this Course
 
