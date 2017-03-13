@@ -8,7 +8,7 @@ The following videos show the final results of the vehicle detection and trackin
 
 Project Track                 |Challenge Track                                   
 :----------------------------:|:-----------------------------:
-[![Track 1](output_images/project_track.png)](https://youtu.be/qPrNg-Wj9U4) | [![Track 2](output_images/challenge_track.png)](https://youtu.be/guve6MOVJq0) 
+[![Track 1](output_images/project_track.png)](https://youtu.be/GkmJqb-PhV4) | [![Track 2](output_images/challenge_track.png)](https://youtu.be/xd_GphgPczI) 
 
 
 The steps of this project are the following:
@@ -103,7 +103,7 @@ Here's an example result showing bounding boxes overlaid on a frame of video:
 
 Project Track                 |Challenge Track                                   
 :----------------------------:|:-----------------------------:
-[![Track 1](output_images/project_track.png)](https://youtu.be/qPrNg-Wj9U4) | [![Track 2](output_images/challenge_track.png)](https://youtu.be/guve6MOVJq0) 
+[![Track 1](output_images/project_track.png)](https://youtu.be/GkmJqb-PhV4) | [![Track 2](output_images/challenge_track.png)](https://youtu.be/xd_GphgPczI) 
 
 
 ### Discussion
