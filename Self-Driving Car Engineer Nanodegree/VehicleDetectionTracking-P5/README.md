@@ -37,7 +37,7 @@ Here I will consider the rubric points individually and describe how I addressed
 
 ### Histogram of Oriented Gradients (HOG)
 
-The code for this step is contained in the 6th cell of the [Train SVM Classifier](notebooks/Train SVM Classifier.ipynb) notebook. `get_hog_features()` is implemented in [feature_extractor.py](feature_extractor.py) (lines 20 through 37)
+The code for this step is contained in the 6th cell of the [Train SVM Classifier](https://github.com/srikanthpagadala/udacity/blob/master/Self-Driving%20Car%20Engineer%20Nanodegree/VehicleDetectionTracking-P5/notebooks/Train%20SVM%20Classifier.ipynb) notebook. `get_hog_features()` is implemented in [feature_extractor.py](feature_extractor.py) (lines 20 through 37)
 
 I started by reading in all the `vehicle` and `non-vehicle` images.  Here are examples of one of each of the `vehicle` and `non-vehicle` classes:
 
