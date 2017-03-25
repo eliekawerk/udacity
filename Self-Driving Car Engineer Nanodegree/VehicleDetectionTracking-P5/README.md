@@ -28,8 +28,8 @@ Here are links to the labeled data for [vehicle](https://s3.amazonaws.com/udacit
 
 Project is implemented in two jupyter notebooks:
 
-- [Train SVM Classifier](Train SVM Classifier.ipynb) - Here cars data is processed and used to train a SVM classifier.
-- [Vehicle Detection and Tracking](Vehicle Detection and Tracking.ipynb) - Classifier trained above is used in sliding window fashion on image pyramids to detect and track cars in the given video.
+- In [Train SVM Classifier](Train SVM Classifier.ipynb) cars data is processed and used to train a SVM classifier.
+- In [Vehicle Detection and Tracking](Vehicle Detection and Tracking.ipynb) a Classifier trained above is used in sliding window fashion on image pyramids to detect and track cars in the given video.
 
 ## Report
 
