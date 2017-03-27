@@ -19,7 +19,7 @@ Recommended order for exploring these projects is as follows:
 
 ### Term 2: Sensor Fusion, Localization, and Control
 
-- Sensor Fusion with Kalman Filters
+- SensorFusion
 - ExtendedKalmanFilter-P1
 
 ## About this Course
