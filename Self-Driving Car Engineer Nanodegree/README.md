@@ -21,6 +21,7 @@ Recommended order for exploring these projects is as follows:
 
 - SensorFusion
 - ExtendedKalmanFilter-P1
+- UnscentedKalmanFilter-P2
 
 ## About this Course
 
