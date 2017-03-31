@@ -7,3 +7,5 @@ build/
 # editor config
 .vscode/
 /Debug/
+/.cproject
+/.project
