@@ -1,12 +1,9 @@
 #ifndef UKF_H
 #define UKF_H
 
-#include "measurement_package.h"
 #include "Eigen/Dense"
-#include <vector>
-#include <string>
-#include <fstream>
-#include "tools.h"
+
+class MeasurementPackage;
 
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
@@ -17,6 +14,9 @@ public:
 	///* initially set to false, set to true in first call of ProcessMeasurement
 	bool is_initialized_;
 
+	// previous timestamp
+	long previous_timestamp_;
+
 	///* if this is false, laser measurements will be ignored (except for init)
 	bool use_laser_;
 
@@ -26,11 +26,38 @@ public:
 	///* state vector: [pos1 pos2 vel_abs yaw_angle yaw_rate] in SI units and rad
 	VectorXd x_;
 
+	// create augmented mean vector
+	VectorXd x_aug;
+
 	///* state covariance matrix
 	MatrixXd P_;
 
+	// create sigma point matrix
+	MatrixXd Xsig_aug;
+
+	// create augmented state covariance
+	MatrixXd P_aug;
+
 	///* predicted sigma points matrix
 	MatrixXd Xsig_pred_;
+
+	// create vector for weights
+	VectorXd weights;
+
+	// set measurement dimension, radar can measure r, phi, and r_dot
+	int n_z;
+
+	// create matrix for sigma points in measurement space
+	MatrixXd Zsig;
+
+	// create matrix for cross correlation Tc
+	MatrixXd Tc;
+
+	// measurement matrix
+	MatrixXd H_laser_;
+
+	// measurement covariance matrix - laser
+	MatrixXd R_laser_;
 
 	///* time when the state is true, in us
 	// long long time_us_;
