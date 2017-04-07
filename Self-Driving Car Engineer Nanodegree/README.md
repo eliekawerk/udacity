@@ -22,6 +22,9 @@ Recommended order for exploring these projects is as follows:
 - SensorFusion
 - ExtendedKalmanFilter-P1
 - UnscentedKalmanFilter-P2
+- MarkovLocalization
+- ParticleFilter
+- ParticleFilter-P3
 
 ## About this Course
 
