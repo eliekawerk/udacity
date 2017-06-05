@@ -24,7 +24,8 @@ Recommended order for exploring these projects is as follows:
 - UnscentedKalmanFilter-P2
 - MarkovLocalization
 - ParticleFilter
-- ParticleFilter-P3, (Kidnapped-Vehicle-Project)
+- ParticleFilter-P3, Kidnapped-Vehicle-Project
+- PIDControl-P4
 
 ## About this Course
 
