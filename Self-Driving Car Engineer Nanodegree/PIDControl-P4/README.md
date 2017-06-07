@@ -11,11 +11,11 @@ PID controller has 3 types of gain parameters:
 
 - Kp - Proportional gain is applied to the current cross track error (Kp * CTE). It causes the car to approach the target, but in doing so, car can overshoot its target
 - Kd - Differential gain is applied to the difference between current CTE and previous CTE. It compensates for the overshoots and bring the car back towards its target.
-- Ki - Integral gain is applied to the sum of all the cross track error since the car started moving. (Ki * sigma(CTE)). It nullifies the effects of steering drift or Systematic Bias of the car, thus keeping the on its target. 
+- Ki - Integral gain is applied to the sum of all the cross track error since the car started moving. (Ki * sigma(CTE)). It nullifies the effects of steering drift or Systematic Bias of the car, thus keeping the car on its target. (lane center)
 
 ### Hyperparameters tuning 
 
-The final hyperparameters (P, I and D) were chosen manully by trial and error.  Reasonable starting parameters were taken from the lesson exercies and then changed them one-by-one little-by-little to observe the effects of the change. I observed that unity simulator has very tiny effect of Ki. P term and D term have steady effect on the car's control. 
+The final hyperparameters (P, I and D) were chosen manully by trial and error.  Reasonable starting parameters were taken from the lesson exercises and then changed them one-by-one little-by-little to observe the effects of the change. I observed that unity simulator has very tiny effect of Ki. P term and D term have steady effect on the car's control. 
 
 I implemented basic PID controller and kept the throttle constant at 0.3
 
@@ -27,7 +27,7 @@ Final values:
 
 ## Result
 
-[![](IMG/track.png)](https://youtu.be/RXAa4chGUXc)
+[![](track.png)](https://youtu.be/RXAa4chGUXc)
 
 ## Dependencies
 
