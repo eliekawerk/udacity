@@ -26,6 +26,7 @@ Recommended order for exploring these projects is as follows:
 - ParticleFilter
 - ParticleFilter-P3, Kidnapped-Vehicle-Project
 - PIDControl-P4
+- ModelPredictiveControl-P5
 
 ## About this Course
 
