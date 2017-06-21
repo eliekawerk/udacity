@@ -3,6 +3,58 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+## Implementation
+
+### The Model
+
+Kinematic model is used to control the car to drive around the provided lake track. Although, this model does not take into consideration effects of wind, tire friction, inertia, etc it is okay for simulations, such as this project, because it is a good approximation.
+
+Equations for the model are:
+
+```
+x_[t+1] = x[t] + v[t] * cos(psi[t]) * dt
+y_[t+1] = y[t] + v[t] * sin(psi[t]) * dt
+psi_[t+1] = psi[t] + v[t] / Lf * delta[t] * dt
+v_[t+1] = v[t] + a[t] * dt
+cte[t+1] = f(x[t]) - y[t] + v[t] * sin(epsi[t]) * dt
+epsi[t+1] = psi[t] - psides[t] + v[t] * delta[t] / Lf * dt
+```
+
+where
+- x,y: car's location
+- psi: car's direction
+- v: velocity of the car
+- cte: cross track error
+- epsi: error in car's orientation
+
+### State
+
+The state vector is [x, y, psi, v, delta, a], where
+
+- x: car's x position
+- y: car;s y position
+- psi: car's heading angle
+- v: car's velocity
+- delta: steering angle of the car
+- a: throttle on the car
+
+### Actuators
+
+- delta: steering angle
+- a: throttle
+
+### Timestep Length and Elapsed Duration (N & dt)
+
+Hyperparameters N and dt were chosen manually by trial and error. Reasonable starting parameters were taken from the lesson exercises and then changed them one-by-one little-by-little to observe the effects of the change. The time T=N*dt is the prediction horizon. If we choose a small horizon, car can be controlled better, but less accuratly. Reasonable parameters are determined by repeated experimentation. Finally I settled with N = 10 and dt = 0.1. These parameters gave car good stability at high speeds. My car achieved approximately on average 70+ mph.
+
+### Polynomial Fitting and Latency
+
+After bit of experimentation I settled with thrid degree polynomial to fit waypoints. Also, chose Cost Function Parameter weights through experimentation. Closely observing the effect of each change. To compenstate for the Latency, as suggested in the lecture, I averaged the two actuator values. In the end weights in (MPC.cpp lines 60-76) gave smoother trajectory. 
+
+## Result
+
+[![](track.png)](https://youtu.be/K3N0ncK_z2I)
+
 ## Dependencies
 
 * cmake >= 3.5
