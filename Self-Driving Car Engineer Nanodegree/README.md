@@ -11,7 +11,7 @@ Recommended order for exploring these projects is as follows:
 - TensorFlow-Lab
 - LeNet-Lab
 - TransferLearning
-    - AlexNet-Lab
+	- AlexNet-Lab
   	- BottleneckFeatures-Lab (VGG, Inception and ResNet)
 - BehavioralCloning-P3
 - AdvancedLaneLines-P4
@@ -27,6 +27,11 @@ Recommended order for exploring these projects is as follows:
 - ParticleFilter-P3, Kidnapped-Vehicle-Project
 - PIDControl-P4
 - ModelPredictiveControl-P5
+
+### Term 3: Path Planning, Concentrations, and Systems
+
+- PathPlanning-P1
+- SemanticSegmentation-P2
 
 ## About this Course
 
