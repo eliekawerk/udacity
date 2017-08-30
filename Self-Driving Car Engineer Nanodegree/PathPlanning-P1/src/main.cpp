@@ -197,8 +197,13 @@ int main() {
   	map_waypoints_dy.push_back(d_y);
   }
 
+  // start in lane 1;
+  int lane = 1;
 
-  h.onMessage([&map_waypoints_x,&map_waypoints_y,&map_waypoints_s,&map_waypoints_dx,&map_waypoints_dy](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length,
+  // Have a reference velocity to target
+  double ref_vel = 0.0; //mph
+
+  h.onMessage([&ref_vel, &lane, &map_waypoints_x,&map_waypoints_y,&map_waypoints_s,&map_waypoints_dx,&map_waypoints_dy](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length,
                      uWS::OpCode opCode) {
     // "42" at the start of the message means there's a websocket message event.
     // The 4 signifies a websocket message
@@ -235,12 +240,6 @@ int main() {
           	// Sensor Fusion Data, a list of all other cars on the same side of the road.
           	auto sensor_fusion = j[1]["sensor_fusion"];
 
-            // start in lane 1;
-            int lane = 1;
-
-            // Have a reference velocity to target
-            double ref_vel = 49.5; //mph
-
           	int prev_size = previous_path_x.size();
 
           	if (prev_size > 0)
@@ -269,12 +268,20 @@ int main() {
           			{
           				// do some logic here, lower reference velocity so we don't crash into the car infront of us, could
           				// also flag to try to change lane.
-          				ref_vel = 29.5; //mph
-          				//too_close = true;
+          				// ref_vel = 29.5; //mph
+          				too_close = true;
           			}
           		}
           	}
 
+          	if (too_close)
+          	{
+          		ref_vel -= .224; // 5m/second square (which is under 10m/sec-sq requirement)
+          	}
+          	else if(ref_vel < 49.5)
+          	{
+          		ref_vel += .224;
+          	}
 
           	// create a list of widely spaced (x,y) waypoints, evenly spaced at 30m
           	// later we will interpolate these waypoints with a spline and fill it in with more points that control speed
