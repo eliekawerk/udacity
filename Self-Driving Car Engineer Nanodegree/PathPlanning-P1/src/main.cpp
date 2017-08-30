@@ -270,6 +270,10 @@ int main() {
           				// also flag to try to change lane.
           				// ref_vel = 29.5; //mph
           				too_close = true;
+          				if(lane > 0)
+          				{
+          					lane = 0; // blindly change lane to left lane :) (for now)
+          				}
           			}
           		}
           	}
