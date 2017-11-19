@@ -163,7 +163,7 @@ vector<double> getCarAheadInLane(vector<vector<double>> sensor_fusion, int check
 			vector<double> check_car = sensor_fusion[i];
 			double check_car_s = check_car[5];
 
-			if (check_car_s > ego_car_s) {
+			if (check_car_s >= ego_car_s) {
 				if (result_car.size() == 0) { // init condition
 					result_car = check_car;
 				} else {
@@ -176,7 +176,7 @@ vector<double> getCarAheadInLane(vector<vector<double>> sensor_fusion, int check
 		}
 	}
 
-	if(result_car.size() > 0)
+	if (result_car.size() > 0)
 		cout << "ahead: (" << check_lane << ") " << result_car[0] << endl;
 	return result_car;
 }
@@ -191,7 +191,7 @@ vector<double> getCarBehindInLane(vector<vector<double>>& sensor_fusion, int che
 			vector<double> check_car = sensor_fusion[i];
 			double check_car_s = check_car[5];
 
-			if (check_car_s < ego_car_s) {
+			if (check_car_s <= ego_car_s) {
 				if (result_car.size() == 0) { // init condition
 					result_car = check_car;
 				} else {
@@ -204,89 +204,17 @@ vector<double> getCarBehindInLane(vector<vector<double>>& sensor_fusion, int che
 		}
 	}
 
-	if(result_car.size() > 0)
+	if (result_car.size() > 0)
 		cout << "behind: (" << check_lane << ") " << result_car[0] << endl;
 	return result_car;
-}
-
-double speedBehindCost(vector<double> car_behind) {
-
-	double max_speed = 49.5 * 0.44704; // 0.44704=MPH2MPS conversion
-
-	double car_behind_vx = car_behind[3]; // [ id, x, y, vx, vy, s, d]
-	double car_behind_vy = car_behind[4]; // [ id, x, y, vx, vy, s, d]
-
-	double car_behind_speed = std::sqrt(std::pow(car_behind_vx, 2.0) + std::pow(car_behind_vy, 2.0));
-	double cost = (car_behind_speed) / max_speed;
-
-	if (cost >= 0)
-		return cost;
-	else
-		return 0.0;
-}
-
-double speedAheadCost(vector<double> car_ahead) {
-
-	double max_speed = 49.5 * 0.44704;
-
-	double car_ahead_vx = car_ahead[3]; // [ id, x, y, vx, vy, s, d]
-	double car_ahead_vy = car_ahead[4]; // [ id, x, y, vx, vy, s, d]
-
-	double car_ahead_speed = std::sqrt(std::pow(car_ahead_vx, 2.0) + std::pow(car_ahead_vy, 2.0));
-
-	double cost = (max_speed - car_ahead_speed) / max_speed;
-
-	if (cost >= 0)
-		return cost;
-	else
-		return 0.0;
-}
-
-double distanceBehindCost(vector<double> car_behind, double max_dist_behind, int ego_car_s) {
-
-	double car_behind_s = car_behind[5]; // [ id, x, y, vx, vy, s, d]
-
-	if (max_dist_behind > 0)
-		return (1.0 - (ego_car_s - car_behind_s) / max_dist_behind);
-	else
-		return 0.0;
-}
-
-double distanceAheadCost(vector<double> car_ahead, double max_dist_ahead, int ego_car_s) {
-
-	double car_ahead_s = car_ahead[5]; // [ id, x, y, vx, vy, s, d]
-
-	if (max_dist_ahead > 0)
-		return (1.0 - (car_ahead_s - ego_car_s) / max_dist_ahead);
-	else
-		return 0.0;
-}
-
-double getCostForLane(vector<double> car_ahead, vector<double> car_behind, int lane, double max_dist_ahead,
-		double max_dist_behind, int ego_car_s, int ego_car_lane) {
-
-	double cost = 0;
-
-	if (ego_car_lane != lane)
-		cost = cost + 0.1; // lane change cost
-
-	if (lane != 1) // lane=1 is middle lane
-		cost = cost + 0.05; // prefer middle lane
-
-	cost += 3 * distanceAheadCost(car_ahead, max_dist_ahead, ego_car_s);
-	cost += 0.5 * distanceBehindCost(car_behind, max_dist_behind, ego_car_s);
-	cost += 2 * speedAheadCost(car_ahead);
-	cost += 0.5 * speedBehindCost(car_behind);
-
-	return cost;
 }
 
 bool checkLaneFeasibility(vector<vector<double>> sensor_fusion, double ego_car_s, double ego_car_lane, int target_lane,
 		int prev_size) {
 
 	double horizont_time = 0.02;
-	double min_distance_behind = 10.0;
-	double min_distance_ahead = 25.0;
+	double min_distance_behind = 50.0;
+	double min_distance_ahead = 50.0;
 
 	double car_ahead_s = 0.0;
 	double car_behind_s = 0.0;
@@ -312,13 +240,13 @@ bool checkLaneFeasibility(vector<vector<double>> sensor_fusion, double ego_car_s
 		car_behind_s = car_behind_s + prev_size * horizont_time * car_behind_speed;
 	}
 
-	cout << "ego_car_s: " << ego_car_s << ", car_ahead_s: " << car_ahead_s << ", car_behind_s: " << car_behind_s << endl;
+	cout << "ego_car_s: " << ego_car_s << ", car_ahead_s: " << car_ahead_s << ", car_behind_s: " << car_behind_s
+			<< endl;
 
 	if (car_ahead.size() == 0 && car_behind.size() == 0) { //No car ahead and behind
 		cout << "NN " << endl;
 		return true;
 	}
-
 
 	if (car_ahead.size() == 0 && !(car_behind.size() == 0)) { //No car ahead. Another car is behind
 		cout << "NY " << (ego_car_s - car_behind_s) << " ( >= " << min_distance_behind << " ) " << endl;
@@ -336,20 +264,17 @@ bool checkLaneFeasibility(vector<vector<double>> sensor_fusion, double ego_car_s
 
 	if (!(car_ahead.size() == 0) && !(car_behind.size() == 0)) { //Another car ahead. Another car behind
 		cout << "YY " << (car_ahead_s - ego_car_s) << "  ---  " << (ego_car_s - car_behind_s) << endl;
-		bool decision = (car_ahead_s - ego_car_s >= min_distance_ahead && ego_car_s - car_behind_s >= min_distance_behind) ?
-				true : false;
+		bool decision =
+				(car_ahead_s - ego_car_s >= min_distance_ahead && ego_car_s - car_behind_s >= min_distance_behind) ?
+						true : false;
 		cout << "decision: " << decision << endl;
 		return decision;
 	}
-
-	cout << "XXXXXXXXXXXXXXXXXXXXXXXXXXXX" << endl;
 
 	return false;
 }
 
 int getLane(vector<vector<double>> sensor_fusion, double ego_car_s, double ego_car_lane, int prev_size) {
-
-	//prev_size = 1;
 
 	cout << endl << endl;
 	cout << "current lane: " << ego_car_lane << endl;
@@ -375,142 +300,29 @@ int getLane(vector<vector<double>> sensor_fusion, double ego_car_s, double ego_c
 	return result_lane;
 }
 
-int getOptimalLane(vector<vector<double>> sensor_fusion, double ego_car_s, double ego_car_lane, int prev_size) {
+int updateSensorFusion(vector<vector<double>>& sensor_fusion, vector<vector<double>>& speed_buffers,
+		vector<vector<double>> sensor_fusion_data) {
 
-	size_t resultLane = ego_car_lane;
+	for (int i = 0; i < sensor_fusion_data.size(); i++) {
 
-	double max_dist_ahead = 0;
-	double max_dist_behind = 0;
+		size_t car_id = sensor_fusion_data[i][0]; // [ id, x, y, vx, vy, s, d]
 
-	vector<vector<double>> cars_ahead;
-	vector<vector<double>> cars_behind;
+		if (sensor_fusion_data[i][6] < 0) {
+			continue;
+		}
 
-	for (int lane = 0; lane < 3; ++lane) {
-		vector<double> car_ahead = getCarAheadInLane(sensor_fusion, lane, ego_car_s);
-		vector<double> car_behind = getCarBehindInLane(sensor_fusion, lane, ego_car_s);
-
-		cars_ahead.push_back(car_ahead);
-		cars_behind.push_back(car_behind);
-
-		double distance = car_ahead[5] - ego_car_s; // [ id, x, y, vx, vy, s, d]
-		if (max_dist_ahead < distance)
-			max_dist_ahead = distance;
-
-		distance = car_behind[5] - ego_car_s; // [ id, x, y, vx, vy, s, d]
-		if (max_dist_behind < distance)
-			max_dist_behind = distance;
-	}
-
-	vector<double> costs;
-	for (int lane = 0; lane < 3; ++lane) {
-		vector<double> car_ahead = cars_ahead[lane];
-		vector<double> car_behind = cars_behind[lane];
-		double cost = getCostForLane(car_ahead, car_behind, lane, max_dist_ahead, max_dist_behind, ego_car_s,
-				ego_car_lane);
-		costs.push_back(cost);
-	}
-
-	int optimalLane = std::distance(costs.begin(), std::min_element(costs.begin(), costs.end()));
-
-	// return optimalLane;
-
-	if (optimalLane != ego_car_lane) {
-		size_t target_lane = ego_car_lane;
-
-		if (optimalLane > ego_car_lane)
-			++target_lane;
-		else
-			--target_lane;
-
-		vector<double> car_ahead = getCarAheadInLane(sensor_fusion, target_lane, ego_car_s);
-		vector<double> car_behind = getCarBehindInLane(sensor_fusion, target_lane, ego_car_s);
-
-		double horizont_time = 0.02;
-		double min_distance_behind = 10.0;
-		double min_distance_ahead = 25.0;
-
-		// car behind
-//		double car_behind_s = car_behind[5]; // [ id, x, y, vx, vy, s, d]
-//		double car_behind_vx = car_behind[3];
-//		double car_behind_vy = car_behind[4];
-//		double car_behind_speed = std::sqrt(std::pow(car_behind_vx, 2.0) + std::pow(car_behind_vy, 2.0));
-//
-//		double check_car_s_behind = car_behind_s + horizont_time * car_behind_speed;
-//		if (ego_car_s - check_car_s_behind >= min_distance_behind)
-//			resultLane = target_lane;
-//
-//		// car ahead
-//		double car_ahead_s = car_ahead[5]; // [ id, x, y, vx, vy, s, d]
-//		double car_ahead_vx = car_ahead[3];
-//		double car_ahead_vy = car_ahead[4];
-//		double car_ahead_speed = std::sqrt(std::pow(car_ahead_vx, 2.0) + std::pow(car_ahead_vy, 2.0));
-//
-//		double check_car_s_ahead = car_ahead_s + horizont_time * car_ahead_speed;
-
-		if (car_ahead.size() == 0) //No car ahead
-				{
-			if (car_behind.size() == 0) //No car behind
-					{
-				resultLane = target_lane;
-			} else //A car behind
-			{
-				double car_behind_s = car_behind[5]; // [ id, x, y, vx, vy, s, d]
-				double car_behind_vx = car_behind[3];
-				double car_behind_vy = car_behind[4];
-				double car_behind_speed = std::sqrt(std::pow(car_behind_vx, 2.0) + std::pow(car_behind_vy, 2.0));
-
-				double check_car_s_behind = car_behind_s + prev_size * horizont_time * car_behind_speed;
-				if (ego_car_s - check_car_s_behind >= min_distance_behind)
-					resultLane = target_lane;
-
-				////
-				// double check_car_s_behind = car_behind.f_pos.s + horizont_time * car_behind.avgSpeed();
-
-				// if (car_state.f_pos.s - check_car_s_behind >= Configuration::MIN_DIST_BEHIND)
-				//	resultLane = target_lane;
-			}
-		} else // A car ahead
-		{
-			double car_ahead_s = car_ahead[5]; // [ id, x, y, vx, vy, s, d]
-			double car_ahead_vx = car_ahead[3];
-			double car_ahead_vy = car_ahead[4];
-			double car_ahead_speed = std::sqrt(std::pow(car_ahead_vx, 2.0) + std::pow(car_ahead_vy, 2.0));
-
-			double check_car_s_ahead = car_ahead_s + prev_size * horizont_time * car_ahead_speed;
-
-			// double check_car_s_ahead = car_ahead.f_pos.s + horizont_time * car_ahead.avgSpeed();
-
-			if (car_behind.size() == 0) //No car behind
-					{
-				if (check_car_s_ahead - ego_car_s >= min_distance_ahead)
-					resultLane = target_lane;
-				//if (check_car_s_ahead - car_state.f_pos.s >= Configuration::MIN_DIST_AHEAD)
-				//	resultLane = target_lane;
-			} else //A car behind
-			{
-				double car_behind_s = car_behind[5]; // [ id, x, y, vx, vy, s, d]
-				double car_behind_vx = car_behind[3];
-				double car_behind_vy = car_behind[4];
-				double car_behind_speed = std::sqrt(std::pow(car_behind_vx, 2.0) + std::pow(car_behind_vy, 2.0));
-
-				double check_car_s_behind = car_behind_s + prev_size * horizont_time * car_behind_speed;
-
-				if (check_car_s_ahead - ego_car_s >= min_distance_ahead
-						&& ego_car_s - check_car_s_behind >= min_distance_behind)
-					resultLane = target_lane;
-
-				//double check_car_s_behind = car_behind.f_pos.s + horizont_time * car_behind.avgSpeed();
-
-				//if (check_car_s_ahead - car_state.f_pos.s >= Configuration::MIN_DIST_AHEAD
-				//		&& car_state.f_pos.s - check_car_s_behind >= Configuration::MIN_DIST_BEHIND)
-				//	resultLane = target_lane;
-			}
+		if (sensor_fusion.size() > car_id) {
+			// update existing car
+			sensor_fusion[car_id] = sensor_fusion_data[i];
+		} else {
+			// create new car
+			vector<double> new_car = sensor_fusion_data[i];
+			sensor_fusion.insert(sensor_fusion.begin() + car_id, new_car);
+			speed_buffers.insert(speed_buffers.begin() + car_id, vector<double>(10));
 		}
 	}
 
-	cout << "resultlane: " << resultLane << endl;
-
-	return resultLane;
+	return 0;
 }
 
 int main() {
@@ -556,8 +368,12 @@ int main() {
 // Have a reference velocity to target
 	double ref_vel = 0.0; //mph
 
+	vector<vector<double>> sensor_fusion;
+
+	vector<vector<double>> speed_buffers;
+
 	h.onMessage(
-			[&ref_vel, &lane, &map_waypoints_x,&map_waypoints_y,&map_waypoints_s,&map_waypoints_dx,&map_waypoints_dy](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length,
+			[&ref_vel, &lane, &sensor_fusion, &speed_buffers, &map_waypoints_x,&map_waypoints_y,&map_waypoints_s,&map_waypoints_dx,&map_waypoints_dy](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length,
 					uWS::OpCode opCode) {
 				// "42" at the start of the message means there's a websocket message event.
 				// The 4 signifies a websocket message
@@ -593,7 +409,8 @@ int main() {
 							double end_path_d = j[1]["end_path_d"];
 
 							// Sensor Fusion Data, a list of all other cars on the same side of the road.
-							auto sensor_fusion = j[1]["sensor_fusion"];
+							auto sensor_fusion_data = j[1]["sensor_fusion"];
+							updateSensorFusion(sensor_fusion, speed_buffers, sensor_fusion_data);
 
 							int prev_size = previous_path_x.size();
 
@@ -603,7 +420,6 @@ int main() {
 							}
 
 							bool too_close = false;
-							bool emergency_brake = false;
 
 							// find ref_v to use
 							for(int i=0;i<sensor_fusion.size();i++)
@@ -626,25 +442,14 @@ int main() {
 										// also flag to try to change lane.
 										// ref_vel = 29.5; //mph
 										too_close = true;
-//										if(lane > 0)
-//										{
-//											// lane = 0; // blindly change lane to left lane :) (for now)
-//											double ego_car_s = car_s;
-//											double ego_car_lane = lane;
-//											lane = getOptimalLane(sensor_fusion, ego_car_s, ego_car_lane, prev_size);
-//											cout << lane << endl;
-//										}
-//
+
 										double ego_car_s = car_s;
 										double ego_car_lane = lane;
 										lane = getLane(sensor_fusion, ego_car_s, ego_car_lane, prev_size);
-										cout << lane << endl;
 										break;
 									}
 								}
 							}
-
-
 
 							if (too_close)
 							{
