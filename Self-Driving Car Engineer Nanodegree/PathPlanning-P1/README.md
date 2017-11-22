@@ -24,7 +24,7 @@ The major portions of the code are following functions in main.cpp:
 
 Watch on Youtube
 
-[![](playvideo.jpg)](https://youtu.be/iJeK8cHZQFg){:target="_blank"}
+[![](playvideo.jpg)](https://youtu.be/iJeK8cHZQFg)
 
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases).
