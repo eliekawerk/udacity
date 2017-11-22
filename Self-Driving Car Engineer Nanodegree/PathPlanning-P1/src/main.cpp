@@ -213,8 +213,8 @@ bool checkLaneFeasibility(vector<vector<double>> sensor_fusion, double ego_car_s
 		int prev_size) {
 
 	double horizont_time = 0.02;
-	double min_distance_behind = 50.0;
-	double min_distance_ahead = 50.0;
+	double min_distance_behind = 70.0;
+	double min_distance_ahead = 70.0;
 
 	double car_ahead_s = 0.0;
 	double car_behind_s = 0.0;
@@ -283,13 +283,13 @@ int getLane(vector<vector<double>> sensor_fusion, double ego_car_s, double ego_c
 	int result_lane = ego_car_lane;
 
 	if (ego_car_lane == 0 || ego_car_lane == 2) {
-		if (checkLaneFeasibility(sensor_fusion, ego_car_s, ego_car_lane, 1, prev_size)) {
+		if (checkLaneFeasibility(sensor_fusion, ego_car_s, ego_car_lane, 1, 1.0)) {
 			result_lane = 1;
 		}
 	} else {
-		if (checkLaneFeasibility(sensor_fusion, ego_car_s, ego_car_lane, 0, prev_size)) {
+		if (checkLaneFeasibility(sensor_fusion, ego_car_s, ego_car_lane, 0, 1.0)) {
 			result_lane = 0;
-		} else if (checkLaneFeasibility(sensor_fusion, ego_car_s, ego_car_lane, 2, prev_size)) {
+		} else if (checkLaneFeasibility(sensor_fusion, ego_car_s, ego_car_lane, 2, 1.0)) {
 			result_lane = 2;
 		}
 	}

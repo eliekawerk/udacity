@@ -1,6 +1,31 @@
 # CarND-Path-Planning-Project
 Self-Driving Car Engineer Nanodegree Program
-   
+  
+### Write-up.
+
+In this project our goal is to safely navigate around a virtual highway with other traffic that is driving +-10 MPH of the 50 MPH speed limit. The car's localization and sensor fusion data is provided. There is also a sparse map list of way points around the highway. The car should try to go as close as possible to the 50 MPH speed limit, which means passing slower traffic when possible, note that other cars will try to change lanes too. The car should avoid hitting other cars at all cost as well as driving inside of the marked road lanes at all times, unless going from one lane to another. The car should be able to make one complete loop around the 6946m highway. Since the car is trying to go 50 MPH, it should take a little over 5 minutes to complete 1 loop. Also the car should not experience total acceleration over 10 m/s^2 and jerk that is greater than 50 m/s^3.
+
+My implementation is influenced by David Silver's video with Aaron Brown. Thank you guys for the helpful tips.
+
+The major portions of the code are following functions in main.cpp:
+
+- main(): is the point of entry to the module. It utilizes other helper functions to drive the car around the track.
+- updateSensorFusion(): is the first function in the pipeline. It deserilizes the given sensor data and captures the information in a easy to use lookup table with car_id as the key and corresponding sensor data as the value.
+- getCarAheadInLane(): this function locates and returns the car infront of the ego car in the requested lane and given the entire sensor fusion data
+- getCarBehindInLane(): this function locates and retunrs the car behind the ego car in the requested lane and given the entire sensor fusion data
+- checkLaneFeasibility(): this function returns true of the given lane is safe to change into. It determines so by making sure that car in the front and behind in the requested lanes are more than the safe gap threshold.
+- getLane(): it returns the lane number that is safe to change into. It does so by making use of above mentioned functions.
+- getFrenet(): transforms from Cartesian x,y coordinates to Frenet s,d coordinates. this was given to us
+- getXY(): transforms from Frenet s,d coordinates to Cartesian x,y
+- NextWaypoint(): returns the next way point. 
+- ClosestWaypoint(): return the closest way point to the ego car. this function was also given to us.
+
+### Result
+
+Watch on Youtube
+
+[![](playvideo.jpg)](https://youtu.be/iJeK8cHZQFg){:target="_blank"}
+
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases).
 
